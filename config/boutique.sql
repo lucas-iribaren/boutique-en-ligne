@@ -1,3 +1,7 @@
+CREATE DATABASE pixel_plush;
+
+USE pixel_plush;
+
 CREATE TABLE Adresse (
     id INT AUTO_INCREMENT PRIMARY KEY,
     adresse VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL ,
