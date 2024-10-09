@@ -1,91 +1,72 @@
--- Table Adresse
 CREATE TABLE Adresse (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    adresse VARCHAR(255) NOT NULL,
-    adresse_complement VARCHAR(255),
-    code_postal VARCHAR(10) NOT NULL,
-    ville VARCHAR(100) NOT NULL,
-    pays VARCHAR(100) NOT NULL,
-    id_utilisateur INT NOT NULL,
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    adresse VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL ,
+    adresse_complement VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
+    code_postal VARCHAR(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    ville VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    pays VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    id_utilisateur INT NOT NULL
 ) ENGINE = InnoDB;
 
--- Table Utilisateur
 CREATE TABLE Utilisateur (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    prenom VARCHAR(100) NOT NULL,
-    nom VARCHAR(100) NOT NULL,
-    email VARCHAR(255) UNIQUE NOT NULL,
-    mot_de_passe VARCHAR(255) NOT NULL,
+    prenom VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    nom VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    email VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci UNIQUE NOT NULL,
+    mot_de_passe VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
     date_inscription TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
     id_adresse INT,
-    id_role BOOLEAN NOT NULL,
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    id_role BOOLEAN NOT NULL
 ) ENGINE = InnoDB;
 
--- Table Commande
 CREATE TABLE Commande (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    status VARCHAR(50) NOT NULL,
+    status VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
     date_commande TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    id_utilisateur INT NOT NULL,
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    id_utilisateur INT NOT NULL
 ) ENGINE = InnoDB;
 
--- Table Commande_Produit (relation many-to-many entre Commande et Produit)
 CREATE TABLE Commande_Produit (
     id_produit INT NOT NULL,
     id_commande INT NOT NULL,
-    PRIMARY KEY (id_produit, id_commande),
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    PRIMARY KEY (id_produit, id_commande)
 ) ENGINE = InnoDB;
 
--- Table Role
 CREATE TABLE Role (
     id BOOLEAN PRIMARY KEY,
-    nom VARCHAR(50) NOT NULL,
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    nom VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE = InnoDB;
 
--- Table Catégorie_Sous-catégorie (relation many-to-many entre Catégorie et Sous-catégorie)
-CREATE TABLE Categorie_Sous_categorie (
+CREATE TABLE Categorie_SousCategorie (
     id_categorie INT NOT NULL,
-    id_sous_categorie INT NOT NULL,
-    PRIMARY KEY (id_categorie, id_sous_categorie),
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    id_sousCategorie INT NOT NULL,
+    PRIMARY KEY (id_categorie, id_sousCategorie)
 ) ENGINE = InnoDB;
 
--- Table Sous-catégorie
-CREATE TABLE Sous_categorie (
+CREATE TABLE SousCategorie (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL,
-    description TEXT,
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    nom VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    description TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE = InnoDB;
 
--- Table Produit
 CREATE TABLE Produit (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(255) NOT NULL,
-    description TEXT,
+    nom VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    description TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
     prix DECIMAL(10,2) NOT NULL,
     quantite INT NOT NULL,
     phare BOOLEAN NOT NULL,
     date_ajout TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
-    id_sous_categorie INT NOT NULL,
-    id_categorie INT NOT NULL,
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    id_sousCategorie INT NOT NULL,
+    id_categorie INT NOT NULL
 ) ENGINE = InnoDB;
 
--- Table Catégorie
 CREATE TABLE Categorie (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(100) NOT NULL,
-    description TEXT,
-    CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
+    nom VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+    description TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE = InnoDB;
 
--- Ajout des contraintes de clés étrangères avec ALTER TABLE
 
 ALTER TABLE Adresse
 ADD CONSTRAINT fk_adresse_utilisateur
@@ -107,14 +88,14 @@ FOREIGN KEY (id_produit) REFERENCES Produit(id),
 ADD CONSTRAINT fk_commande_produit_commande
 FOREIGN KEY (id_commande) REFERENCES Commande(id);
 
-ALTER TABLE Categorie_Sous_categorie
-ADD CONSTRAINT fk_categorie_sous_categorie_categorie
+ALTER TABLE Categorie_SousCategorie
+ADD CONSTRAINT fk_categorie_sousCategorie_categorie
 FOREIGN KEY (id_categorie) REFERENCES Categorie(id),
-ADD CONSTRAINT fk_categorie_sous_categorie_sous_categorie
-FOREIGN KEY (id_sous_categorie) REFERENCES Sous_categorie(id);
+ADD CONSTRAINT fk_categorie_sousCategorie_sousCategorie
+FOREIGN KEY (id_sousCategorie) REFERENCES SousCategorie(id);
 
 ALTER TABLE Produit
-ADD CONSTRAINT fk_produit_sous_categorie
-FOREIGN KEY (id_sous_categorie) REFERENCES Sous_categorie(id),
+ADD CONSTRAINT fk_produit_sousCategorie
+FOREIGN KEY (id_sousCategorie) REFERENCES SousCategorie(id),
 ADD CONSTRAINT fk_produit_categorie
 FOREIGN KEY (id_categorie) REFERENCES Categorie(id);
