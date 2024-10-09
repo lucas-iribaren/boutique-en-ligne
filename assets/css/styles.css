@@ -1,0 +1,113 @@
+/* Couleurs */
+:root {
+    --background: #faf2e2;
+    --yellow: #eac88e;
+    --blue: #8fc4f7;
+    --grey: #b3b3b3;
+    --red: #e97e69;
+}
+
+/* Réinitialisation de base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Afaacad', sans-serif;
+    background-color: var(--background);
+    color: #333;
+}
+
+.peralta-regular {
+    font-family: "Peralta", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* Typographie */
+h1 {
+    font-family: 'Peralta', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Peralta', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-family: 'Peralta', serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-ajouter {
+    background-color: var(--yellow);
+    border: none;
+}
+
+.btn-supprimer {
+    background-color: var(--red);
+    border: none;
+}
+
+.btn-ajouter:hover {
+    background-color: #e5b86b;
+}
+.btn-supprimer:hover {
+    background-color: #e1664d;
+}
+
+/* Conteneurs */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Sections et fonds */
+.section {
+    background-color: var(--blue);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form,
+.description {
+    background-color: var(--grey);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Header */ 
+.header {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+}
