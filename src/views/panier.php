@@ -7,7 +7,7 @@ include '_head.php';
 <link rel="icon" type="image/x-icon" href="../../assets/images/logo.png">
 </head>
 <body>
-    <?php include 'bandeau.php'; ?>
+    <?php include '_bandeau.php'; ?>
     <main>
     <section class="section">
             <h2>Panier :</h2>
