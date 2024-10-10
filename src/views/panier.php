@@ -18,7 +18,6 @@ include '_head.php';
                 <input type="number" value="1" min="1">
                 <button class="btn-supprimer">Supprimer</button>
             </section><br>
-
             <section>
                 <input type="checkbox">
                 <img src="creeper.png" alt="Peluche creeper">
@@ -26,7 +25,6 @@ include '_head.php';
                 <input type="number" value="1" min="1">
                 <button class="btn-supprimer">Supprimer</button>
             </section><br>
-
             <section>
                 <input type="checkbox">
                 <img src="creeper.png" alt="Peluche creeper">
@@ -34,8 +32,6 @@ include '_head.php';
                 <input type="number" value="1" min="1">
                 <button class="btn-supprimer">Supprimer</button>
             </section><br>
-
-            <!-- Récapitulatif et validation -->
             <section>
                 <p>3 articles dans le panier</p>
                 <p>Total de la commande : 27€ (2 articles)</p>
