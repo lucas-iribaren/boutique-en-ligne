@@ -1,19 +1,14 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav-links');
+const hamMenu = document.querySelector('.ham-menu');
+const offScreenMenu = document.querySelector('.off-screen-menu');
 
-    burger.addEventListener('click', function() {
-        nav.classList.toggle('nav-active');
-        burger.classList.toggle('toggle');
-    });
+hamMenu.addEventListener('click', () => {
+    hamMenu.classList.toggle('active');
+    offScreenMenu.classList.toggle('active');
+})
 
-    function disableNavOnDesktop() {
-        if (window.innerWidth > 768) {
-            nav.classList.remove('nav-active');
-            burger.classList.remove('toggle');
-        }
+document.addEventListener('click', (event) => {
+    if (!offScreenMenu.contains(event.target) && !hamMenu.contains(event.target)) {
+        hamMenu.classList.remove('active');
+        offScreenMenu.classList.remove('active');
     }
-
-    window.addEventListener('resize', disableNavOnDesktop);
-    disableNavOnDesktop(); // Initial check
 });
