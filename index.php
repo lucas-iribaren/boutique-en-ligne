@@ -1,18 +1,8 @@
 <?php
 $title = 'Accueil';
-include 'src/views/_head.php';
-?>
+include 'include/_head.php';
+include 'include/_header.php'; ?>
+<main>
 
-<body>
-    <header>
-
-    </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
-</body>
-
-</html>
+</main>
+<?php include 'include/_footer.php'; ?>
