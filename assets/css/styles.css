@@ -7,6 +7,7 @@
     --red: #e97e69;
 }
 
+
 /* Réinitialisation de base */
 body {
     margin: 0;
@@ -16,13 +17,13 @@ body {
     color: #333;
 }
 
+/* Typographie */
 .peralta-regular {
     font-family: "Peralta", serif;
     font-weight: 400;
     font-style: normal;
-  }
-  
-/* Typographie */
+}
+
 h1 {
     font-family: 'Peralta', serif;
     font-weight: 400;
@@ -47,6 +48,7 @@ h3 {
 p {
     font-size: 1rem;
     line-height: 1.5;
+    color: #333;
 }
 
 /* Boutons */
@@ -73,11 +75,13 @@ p {
 .btn-ajouter:hover {
     background-color: #e5b86b;
 }
+
 .btn-supprimer:hover {
     background-color: #e1664d;
 }
 
 /* Conteneurs */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -85,6 +89,13 @@ p {
 }
 
 /* Sections et fonds */
+header,
+footer {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+}
+
 .section {
     background-color: var(--blue);
     padding: 20px;
@@ -98,16 +109,165 @@ p {
     border-radius: 10px;
 }
 
-/* Header */ 
-.header {
-    background-color: var(--blue);
-    padding: 20px;
-    text-align: center;
+
+a {
+    text-decoration: none;
+    color: #333;
 }
 
-/* Footer */
-.footer {
-    background-color: var(--blue);
-    padding: 20px;
-    text-align: center;
+/* Flexbox */
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.space-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.vertical-center {
+    align-items: center;
+}
+
+.gap {
+    gap: 20px;
+}
+
+/* Images */
+.logo {
+    height: 100px;
+    object-fit: contain;
+}
+
+
+.hw-50px {
+    height: 50px;
+    width: 50px;
+}
+
+/* Formulaire */
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: min-content;
+}
+
+
+/* burger */
+.burger {
+    display: none;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+}
+
+.hide_desktop {
+    display: none;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+    .hide_mobile {
+        display: none;
+    }
+
+    /* Menu*/
+    .burger {
+        display: block;
+    }
+
+    .off-screen-menu {
+        background-color: #333;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        left: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2rem;
+        transition: 0.3s ease;
+
+    }
+
+    .off-screen-menu li {
+        list-style: none;
+        margin: 20px 0;
+
+    }
+
+    .off-screen-menu a {
+        color: var(--background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .off-screen-menu.active {
+        left: 0px;
+    }
+
+    .ham-menu {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+    }
+
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: var(--blue);
+    }
+
+    .ham-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background-color: var(--blue);
+
+    }
 }
