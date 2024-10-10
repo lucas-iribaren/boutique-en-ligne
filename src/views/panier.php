@@ -1,7 +1,5 @@
 <?php
-
-$title = "Mon Panier";
-
+$title = 'Mon Panier';
 include '_head.php';
 ?>
 <head>
