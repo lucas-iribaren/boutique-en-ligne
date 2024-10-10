@@ -1,6 +1,6 @@
 <footer>
     <br>
     <section class="section">
-        <p>2024</p>
+        <p>&copy; Pixel Plush 2024</p>
     </section>
 </footer>
