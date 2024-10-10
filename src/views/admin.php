@@ -8,7 +8,6 @@
 </head>
 <body>
     <section class="container">
-        <!-- Conteneur des champs de saisie -->
         <section class="section">
             <img class="logo" src="../../assets/images/logo.png" alt="" srcset="">
             <label for="categories">Nom de Categories</label>
