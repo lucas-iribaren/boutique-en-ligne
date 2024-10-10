@@ -1,3 +1,3 @@
 <html>
-<p>ERREUR 404<p>
+<p>ERREUR 404 : page non trouvée<p>
 </html>
