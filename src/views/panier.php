@@ -5,6 +5,8 @@ include '_head.php';
 ?>
 <body>
     <main>
-        blablaa
+        <section class="section">
+            bla
+        </section>
     </main>
 </body>
