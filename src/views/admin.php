@@ -8,7 +8,9 @@
 </head>
 <body>
     <section class="container">
+        <!-- Conteneur des champs de saisie -->
         <section class="section">
+            <img class="logo" src="../../assets/images/logo.png" alt="" srcset="">
             <label for="categories">Nom de Categories</label>
             <input type="text" id="categories" placeholder="Name">
         </section>
@@ -23,12 +25,13 @@
             <input type="text" id="tags" placeholder="Name">
         </section>
         
-        <button class="btn-ajouter" type="submit">Validate</button>
+        <button class="btn-ajouter" type="submit">Valider</button>
     </section>
 
+    <!-- Conteneur pour l'image et la description -->
     <section class="container">
         <section class="section">
-            <img src="#" alt="" style="max-width: 100%; border-radius: 5px;">
+            <img src="../../assets/images/placeholder.png" alt="Image" style="max-width: 100%; border-radius: 5px;">
         </section>
         
         <section class="section">
