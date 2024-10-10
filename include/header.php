@@ -1,22 +1,33 @@
 <header class="flex space-between center vertical-center">
-    <div class="burger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+    <div class="off-screen-menu hide_desktop">
+        <ul>
+            <li>
+                <a class="#" href="#">Panier
+                    <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
+                </a>
+            </li>
+            <li>
+                <a href="#">Rechercher
+                    <img class="hw-50px" src="assets/images/loupe.png" alt="loupe logo">
+                </a>
+            </li>
+        </ul>
     </div>
-    <a href="#">Panier
-        <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
-    </a>
-    <a href="">Rechercher
-        <img class="hw-50px" src="assets/images/loupe.png" alt="loupe logo">
-    </a>
+
+    <nav>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
     <a href="index.php">
         <img src="assets/images/logo.png" class="logo" alt="logo">
     </a>
-    <h1 class="hide">Pixel Plush</h1>
+    <h1 class="hide_mobile">Pixel Plush</h1>
     <nav class="flex space-center vertical-center gap">
-        <input class="hide" type="text" placeholder="Rechercher">
-        <a class="hide" href="#">
+        <input class="hide_mobile" type="text" placeholder="Rechercher">
+        <a class="hide_mobile" href="#">
             <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
             Panier
         </a>
