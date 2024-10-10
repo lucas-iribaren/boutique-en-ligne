@@ -1,13 +1,14 @@
 <?php
 $title = 'Mon Panier';
-include '_head.php';
+include '../../include/_head.php';
 ?>
 <head>
 <link rel="stylesheet" href="../../assets/css/styles.css">
-<link rel="icon" type="image/x-icon" href="../../assets/images/logo.png">
+<link rel="icon" type="favicon" href="../../assets/images/favicon.ico">
 </head>
 <body>
-    <?php include '_bandeau.php'; ?>
+    <?php include '../../include/_header.php';
+          include '../../include/_bandeau.php'; ?>
     <main>
     <section class="section">
             <h2>Panier :</h2>
@@ -39,5 +40,5 @@ include '_head.php';
             </section>
         </section>
     </main>
-    <?php include '_footer.php' ?>
+    <?php include '../../include/_footer.php' ?>
 </body>
