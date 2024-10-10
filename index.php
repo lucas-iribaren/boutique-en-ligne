@@ -11,9 +11,4 @@
     <link href="https://fonts.googleapis.com/css2?family=Peralta&display=swap" rel="stylesheet">
 </head>
 
-<body>
-
-
-</body>
-
 </html>
