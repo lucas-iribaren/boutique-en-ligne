@@ -7,6 +7,12 @@
     --red: #e97e69;
 }
 
+.peralta-regular {
+    font-family: "Peralta", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* Réinitialisation de base */
 body {
     margin: 0;
@@ -16,12 +22,13 @@ body {
     color: #333;
 }
 
-.peralta-regular {
-    font-family: "Peralta", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+header,
+footer {
+    background-color: var(--blue);
+    padding: 20px;
+    text-align: center;
+}
+
 /* Typographie */
 h1 {
     font-family: 'Peralta', serif;
@@ -47,6 +54,7 @@ h3 {
 p {
     font-size: 1rem;
     line-height: 1.5;
+    color: #333;
 }
 
 /* Boutons */
@@ -73,6 +81,7 @@ p {
 .btn-ajouter:hover {
     background-color: #e5b86b;
 }
+
 .btn-supprimer:hover {
     background-color: #e1664d;
 }
@@ -98,16 +107,43 @@ p {
     border-radius: 10px;
 }
 
-/* Header */ 
-.header {
-    background-color: var(--blue);
-    padding: 20px;
-    text-align: center;
+
+
+
+.flex {
+    display: flex;
 }
 
-/* Footer */
-.footer {
-    background-color: var(--blue);
-    padding: 20px;
-    text-align: center;
+.logo {
+    height: 100px;
+    object-fit: contain;
+}
+
+.space-center {
+    justify-content: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.vertical-center {
+    align-items: center;
+}
+
+.gap {
+    gap: 20px;
+}
+
+.hw-50px {
+    height: 50px;
+    width: 50px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: min-content;
 }
