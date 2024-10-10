@@ -22,6 +22,7 @@
     <footer>
 
     </footer>
+    <script src="assets/js/burger.js"></script>
 </body>
 
 </html>
