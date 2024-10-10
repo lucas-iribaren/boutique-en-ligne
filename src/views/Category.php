@@ -1,9 +1,3 @@
-<?php 
-include('_head.php');
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,22 +16,22 @@ include('_head.php');
         </section>
         <section class="container">
             <section class="articles">
-                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="" width='20%' height='30%'>
                     <button type="button">🔲</button>
                     <button type="button">🔲</button>
                     <button type="button">🔲</button>
             </section>
             <section class="articles">
-                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="" width='20%' height='30%'>
             </section>
             <section class="articles">
-                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="" width='20%' height='30%'>
             </section>
             <section class="articles">
-                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="" width='20%' height='30%'>
             </section>
             <section class="articles">
-                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="" width='20%' height='30%'>
             </section>
         </section>
         <section class="chapters">
