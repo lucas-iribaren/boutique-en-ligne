@@ -21,7 +21,29 @@ include('_head.php');
             </section>
         </section>
         <section class="container">
-            
+            <section class="articles">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+                    <button type="button">🔲</button>
+                    <button type="button">🔲</button>
+                    <button type="button">🔲</button>
+            </section>
+            <section class="articles">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+            </section>
+            <section class="articles">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+            </section>
+            <section class="articles">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+            </section>
+            <section class="articles">
+                <img src="../../assets/images/placeholder.png" alt="" srcset="">
+            </section>
+        </section>
+        <section class="chapters">
+            <a href="http://" target="_blank" rel="noopener noreferrer">1</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">2</a>
+            <a href="http://" target="_blank" rel="noopener noreferrer">3</a>
         </section>
     </body>
 </html>
