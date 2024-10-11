@@ -91,15 +91,25 @@ p {
 /* Sections et fonds */
 header,
 footer {
-    background-color: var(--blue);
     padding: 20px;
     text-align: center;
+}
+
+footer {
+    background-color: var(--blue);
 }
 
 .section {
     background-color: var(--blue);
     padding: 20px;
-    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.section h2,
+.section h3 {
+    color: var(--background);
+    font-size: 1.5rem;
+
 }
 
 .form,
@@ -157,9 +167,13 @@ a {
 input[type="text"] {
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 2px solid #33333350;
     width: 100%;
     height: min-content;
+}
+
+input[type="text"]:focus {
+    border: 2px solid #333;
 }
 
 
