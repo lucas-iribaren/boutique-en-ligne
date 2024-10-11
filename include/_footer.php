@@ -1,10 +1,8 @@
 <footer>
-    <script src="assets/js/burger.js"></script>
-    <section class="section">
-        <p>&copy; Pixel Plush 2024</p>
-    </section>
+    <p>&copy; Pixel Plush 2024</p>
 </footer>
 
+<script src="assets/js/burger.js"></script>
 </body>
 
 </html>
