@@ -1,3 +1,3 @@
 <section class="section">
-    <p>Retrouve tes personnages préférés à câliner</p>
+    <h2>Retrouve tes personnages préférés à câliner</h2>
 </section>
