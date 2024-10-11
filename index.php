@@ -1,28 +1,23 @@
-<!DOCTYPE html>
-<html lang="fr">
+<?php
+include_once(__DIR__ . "./include/_head.php");
+include_once(__DIR__ . "./include/_header.php");
+?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Peralta&display=swap" rel="stylesheet">
-</head>
-
-<body>
+<main>
     <?php
-    include 'include/header.php';
-    ?>
+    include_once(__DIR__ . "./include/_bandeau.php");
+    // Définit la page par défaut 
+    $page = isset($_GET['page']) ? $_GET['page'] : 'index';
 
-    <main>
+    // Chemin du fichier correspondant à la page
+    $file = __DIR__ . "./src/views/" . $page . ".php";
 
-    </main>
-    <footer>
-
-    </footer>
-    <script src="assets/js/burger.js"></script>
-</body>
-
-</html>
+    // Vérifie si le chemain existe, sinon affiche une erreur
+    if (file_exists($file)) {
+        require_once($file);
+    } else {
+        require_once(__DIR__ . "./src/views/page404.php");
+    }
+    ?></main><?php
+include_once(__DIR__ . "./include/_footer.php");
+?>
