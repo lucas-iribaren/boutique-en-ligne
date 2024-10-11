@@ -3,7 +3,7 @@
     $page = isset($_GET['page']) ? $_GET['page'] : 'index';
 
     // Chemin du fichier correspondant à la page
-    $file = __DIR__ . "src/views" . $page . ".php";
+    $file = __DIR__ . "src/views/" . $page . ".php";
 
     // Vérifie si le chemain existe, sinon affiche une erreur
     if (file_exists($file)) {
@@ -11,4 +11,13 @@
     } else {
         require_once (__DIR__ . "/src/views/page404.php");
     }
+
+
+    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+$action = isset($_GET['action']) ? $_GET['action'] : 'index';
+$id = isset($_GET['id']) ? $_GET['id'] : null;
+
+echo "Page: $page, Action: $action, ID: $id"; // Pour tester
+
+
 ?>
