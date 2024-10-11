@@ -19,45 +19,45 @@
         <section class="articles">
             <img src="../../assets/images/placeholder.png" alt="Article Image">
             <ul>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
             </ul>
         </section>
 
         <section class="articles">
             <img src="../../assets/images/placeholder.png" alt="Article Image">
             <ul>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
             </ul>
         </section>
 
         <section class="articles">
             <img src="../../assets/images/placeholder.png" alt="Article Image">
             <ul>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
             </ul>
         </section>
 
         <section class="articles">
             <img src="../../assets/images/placeholder.png" alt="Article Image">
             <ul>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
             </ul>
         </section>
 
         <section class="articles">
             <img src="../../assets/images/placeholder.png" alt="Article Image">
             <ul>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
-                <li><button type="button">🔲</button></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
+                <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
             </ul>
         </section>
     </section>
