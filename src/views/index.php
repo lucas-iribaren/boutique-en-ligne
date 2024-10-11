@@ -1,4 +1,12 @@
 <?php
 $title = 'Accueil';
+
+ob_start();
 ?>
-<p>BIENVENU SUR PIXEL PLUSH !</p>
+
+<section class="section_phare">
+    <h3>Produits phares</h3>
+    <article class="article_phare">
+
+    </article>
+</section>
