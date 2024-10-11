@@ -11,13 +11,4 @@
     } else {
         require_once (__DIR__ . "/src/views/page404.php");
     }
-
-
-    $page = isset($_GET['page']) ? $_GET['page'] : 'home';
-$action = isset($_GET['action']) ? $_GET['action'] : 'index';
-$id = isset($_GET['id']) ? $_GET['id'] : null;
-
-echo "Page: $page, Action: $action, ID: $id"; // Pour tester
-
-
 ?>
