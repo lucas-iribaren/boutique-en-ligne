@@ -88,6 +88,16 @@ p {
     padding: 20px;
 }
 
+.article_phare {
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--blue);
+}
+
+
+
 /* Sections et fonds */
 header,
 footer {
@@ -98,13 +108,18 @@ footer {
 footer {
     background-color: var(--blue);
 }
-
+.section_phare,
 .section {
     background-color: var(--blue);
     padding: 20px;
     margin-bottom: 20px;
     text-align: center;
 }
+
+.section_phare {
+    background-color: var(--yellow);
+}
+
 .section h2,
 .section h3 {
     color: var(--background);
