@@ -101,10 +101,10 @@ footer {
 
 .section {
     background-color: var(--blue);
-    padding: 20px;
+    padding: 40px 20px;
     margin-bottom: 20px;
-    text-align: center;
 }
+
 .section h2,
 .section h3 {
     color: var(--background);
