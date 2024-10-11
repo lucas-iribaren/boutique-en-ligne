@@ -300,7 +300,7 @@ input[type="text"] {
 }
 
 .articles {
-    background-color: var(--grey);
+    background-color: var(--blue);
     padding: 20px;
     border-radius: 10px;
     display: flex;
@@ -329,15 +329,18 @@ input[type="text"] {
 }
 
 .articles button {
-    margin: 0;
+    background-color: var(--grey); 
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
     padding: 10px;
-    border: none;
-    border-radius: 5px;
+    margin: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .articles button:hover {
-    background-color: #72a7d6;
+    background-color: #e5e5e5; /* Slightly lighter grey for hover effect */
+    border-color: #999; /* Darker border when hovering */
 }
 
 /* Chapters */
@@ -351,11 +354,11 @@ input[type="text"] {
 .chapters a {
     text-decoration: none;
     color: var(--blue);
-    background-color: var(--yellow);
+    background-color: var(--red);
     padding: 10px 15px;
     border-radius: 5px;
 }
 
 .chapters a:hover {
-    background-color: #e5b86b;
+    background-color: var(--red);
 }
