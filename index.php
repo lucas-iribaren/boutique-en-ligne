@@ -18,6 +18,7 @@ include_once(__DIR__ . "./include/_header.php");
     } else {
         require_once(__DIR__ . "./src/views/page404.php");
     }
-    ?></main><?php
+    ?></main>
+    <?php
 include_once(__DIR__ . "./include/_footer.php");
 ?>
