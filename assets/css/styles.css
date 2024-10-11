@@ -328,23 +328,8 @@ input[type="text"] {
     list-style-type: none;
 }
 
-.articles button {
-    background-color: var(--grey); 
-    border: 2px solid #ccc; 
-    border-radius: 8px; 
-    padding: 10px;
-    margin: 5px;
-    cursor: pointer;
-    width: 0;
-    transition: background-color 0.3s, border-color 0.3s;
-}
 
-.articles button:hover {
-    background-color: #e5e5e5; /* Slightly lighter grey for hover effect */
-    border-color: #999; /* Darker border when hovering */
-}
 
-/* Chapters */
 .chapters {
     display: flex;
     justify-content: center;
@@ -361,5 +346,5 @@ input[type="text"] {
 }
 
 .chapters a:hover {
-    background-color: var(--red);
+    background-color: var(--white);
 }
