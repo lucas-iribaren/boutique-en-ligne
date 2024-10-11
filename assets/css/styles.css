@@ -189,6 +189,10 @@ input[type="text"]:focus {
     margin: 6px 0;
 }
 
+.hide {
+    display: none;
+}
+
 .hide_desktop {
     display: none;
 }
