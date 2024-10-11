@@ -1,15 +1,8 @@
 <?php
 $title = 'Mon Panier';
-include '../../include/_head.php';
+ob_start();
 ?>
-<head>
-<link rel="stylesheet" href="../../assets/css/styles.css">
-<link rel="icon" type="favicon" href="../../assets/images/favicon.ico">
-</head>
-<body>
-    <?php include '../../include/_header.php';
-          include '../../include/_bandeau.php'; ?>
-    <main>
+    <main id="panier">
     <section class="section">
             <h2>Panier :</h2>
             <section>
@@ -40,5 +33,3 @@ include '../../include/_head.php';
             </section>
         </section>
     </main>
-    <?php include '../../include/_footer.php' ?>
-</body>
