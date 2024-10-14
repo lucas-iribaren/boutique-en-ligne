@@ -112,6 +112,11 @@ footer {
 
 }
 
+.section-title {
+    text-align: center;
+    color: var(--background);
+}
+
 .form,
 .description {
     background-color: var(--grey);

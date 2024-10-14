@@ -12,7 +12,6 @@ include $includePath . '_header.php';
     <section class="section">
         <h1 class="section-title">Gestion des Produits</h1>
     </section>
-    <!-- Le reste du contenu de votre page ira ici -->
 </main>
 <?php
 
