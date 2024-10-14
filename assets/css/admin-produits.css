@@ -27,19 +27,35 @@
 
 /* Version Mobile - 3 colonnes */
 @media (max-width: 768px) {
-    /* On cache toutes les colonnes sauf ID, Nom produit et Détail */
+    /* Cacher toutes les colonnes sauf ID, Nom produit et Détail */
     .product-table tr th:nth-child(4),
+    .product-table tr td:nth-child(4),
     .product-table tr th:nth-child(5),
-    .product-table tr th:nth-child(6) {
+    .product-table tr td:nth-child(5),
+    .product-table tr th:nth-child(6),
+    .product-table tr td:nth-child(6),
+    .product-table tr th:nth-child(7),
+    .product-table tr td:nth-child(7) {
         display: none;
     }
 
-    /* Renommer la colonne "Description" en "Détail" uniquement en version mobile */
+    /* Remplacer "Description" par "Détail" */
     .product-table .description-header::before {
-        content: "Détail";
+        content: "Détail"; /* Affiche "Détail" */
     }
 
+    /* Masquer le texte original "Description" sans affecter la taille */
     .product-table .description-header {
-        display: table-cell;
+        visibility: hidden;
+        position: relative;
+    }
+
+    .product-table .description-header::before {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        color: inherit;
     }
 }
