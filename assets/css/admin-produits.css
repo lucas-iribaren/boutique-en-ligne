@@ -6,6 +6,7 @@
 }
 
 /* Style des cellules */
+.product-table th,
 .product-table td {
     border: 1px solid var(--grey);
     padding: 10px;
@@ -13,21 +14,32 @@
 
 /* Version Desktop - 7 colonnes */
 @media (min-width: 769px) {
-    .product-table tr td {
-        display: table-cell; /* Affiche toutes les cellules sur desktop */
+    .product-table tr th:nth-child(1),
+    .product-table tr th:nth-child(2),
+    .product-table tr th:nth-child(3),
+    .product-table tr th:nth-child(4),
+    .product-table tr th:nth-child(5),
+    .product-table tr th:nth-child(6),
+    .product-table tr th:nth-child(7) {
+        display: table-cell; /* Affiche toutes les colonnes */
     }
 }
 
 /* Version Mobile - 3 colonnes */
 @media (max-width: 768px) {
-    .product-table tr td:nth-child(4),
-    .product-table tr td:nth-child(5),
-    .product-table tr td:nth-child(6),
-    .product-table tr td:nth-child(7) {
-        display: none; /* Cache les colonnes 4 à 7 sur mobile */
+    /* On cache toutes les colonnes sauf ID, Nom produit et Détail */
+    .product-table tr th:nth-child(4),
+    .product-table tr th:nth-child(5),
+    .product-table tr th:nth-child(6) {
+        display: none;
     }
-    
-    .product-table {
-        grid-template-columns: repeat(3, 1fr); /* Ajustement pour 3 colonnes */
+
+    /* Renommer la colonne "Description" en "Détail" uniquement en version mobile */
+    .product-table .description-header::before {
+        content: "Détail";
+    }
+
+    .product-table .description-header {
+        display: table-cell;
     }
 }
