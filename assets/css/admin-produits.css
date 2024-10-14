@@ -1,0 +1,33 @@
+/* Style de base du tableau */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Style des cellules */
+.product-table td {
+    border: 1px solid var(--grey);
+    padding: 10px;
+}
+
+/* Version Desktop - 7 colonnes */
+@media (min-width: 769px) {
+    .product-table tr td {
+        display: table-cell; /* Affiche toutes les cellules sur desktop */
+    }
+}
+
+/* Version Mobile - 3 colonnes */
+@media (max-width: 768px) {
+    .product-table tr td:nth-child(4),
+    .product-table tr td:nth-child(5),
+    .product-table tr td:nth-child(6),
+    .product-table tr td:nth-child(7) {
+        display: none; /* Cache les colonnes 4 à 7 sur mobile */
+    }
+    
+    .product-table {
+        grid-template-columns: repeat(3, 1fr); /* Ajustement pour 3 colonnes */
+    }
+}
