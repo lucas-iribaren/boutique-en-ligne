@@ -15,7 +15,7 @@ include $includePath . '_header.php';
         <!-- Tableau -->
         <table class="product-table">
             <!-- Ligne 1 : En-têtes -->
-            <tr>
+            <tr class="line-1">
                 <td>ID</td>
                 <td>Nom produit</td>
                 <td class="description-header">Description</td>
@@ -25,7 +25,7 @@ include $includePath . '_header.php';
                 <td>Catégorie</td>
             </tr>
             <!-- Ligne 2 : Vide -->
-            <tr>
+            <tr class="other-lines">
                 <td></td>
                 <td></td>
                 <td></td>
@@ -35,17 +35,7 @@ include $includePath . '_header.php';
                 <td></td>
             </tr>
             <!-- Ligne 3 : Vide -->
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <!-- Ligne 4 : Vide -->
-            <tr>
+            <tr class="other-lines">
                 <td></td>
                 <td></td>
                 <td></td>

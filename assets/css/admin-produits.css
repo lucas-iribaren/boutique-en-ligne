@@ -8,8 +8,20 @@
 /* Style des cellules */
 .product-table th,
 .product-table td {
-    border: 1px solid var(--grey);
+    border: 1px solid black;
     padding: 10px;
+    font-family: 'Afaacad', sans-serif;
+}
+
+/* Ligne 1 */
+.line-1 {
+    background-color: var(--grey);
+    color: var(--background);
+}
+
+/* Autres lignes */
+.other-lines {
+    background-color: var(--background);
 }
 
 /* Version Desktop - 7 colonnes */
