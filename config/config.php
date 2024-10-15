@@ -27,10 +27,19 @@ class myAutoload
         if(file_exists(MODEL . $classPath . 'php'))
         {
             include_once MODEL . $classPath . 'php';
-        } elseif (file_exists(CONTROLLER . $classPath . 'php'))
+        } 
+        
+        elseif (file_exists(CONTROLLER . $classPath . 'php'))
         {
             include_once CONTROLLER . $classPath . 'php';
-        } else {
+        } 
+
+        elseif (file_exists(VIEW . $classPath . '.php'))
+        {
+            include_once VIEW . $classPath . '.php';
+        }
+        
+        else {
             throw new Exception("Class $class not found.");
         }
     }
