@@ -35,6 +35,10 @@
     .product-table tr th:nth-child(7) {
         display: table-cell; /* Affiche toutes les colonnes */
     }
+
+    .product-table .description-cell::after {
+        display: none;
+    }
 }
 
 /* Version Mobile - 3 colonnes */
@@ -70,5 +74,37 @@
         visibility: hidden;
         position: relative;
         background-color: var(--grey); /* Assure que le fond gris est appliqué */
+    }
+
+    /* Nouveau style pour le bouton '+' */
+    .product-table .description-cell {
+        position: relative;
+        background-color: yellow; /* Temporaire pour le débogage */
+    }
+
+    .product-table .description-cell::after {
+        content: "+";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: var(--background);
+        background-color: var(--blue);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10; /* Assurez-vous que le bouton est au-dessus des autres éléments */
+    }
+}
+
+/* Version Desktop - cacher le bouton '+' */
+@media (min-width: 769px) {
+    .product-table .description-cell::after {
+        display: none;
     }
 }

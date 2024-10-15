@@ -12,6 +12,7 @@ include $includePath . '_header.php';
     <section class="section">
         <h1 class="section-title">Gestion des Produits</h1>
         
+        <?php if (isset($products) && is_array($products) && !empty($products)): ?>
         <!-- Tableau -->
         <table class="product-table">
             <!-- Ligne 1 : En-têtes -->
@@ -24,27 +25,21 @@ include $includePath . '_header.php';
                 <td>Sous-catégorie</td>
                 <td>Catégorie</td>
             </tr>
-            <!-- Ligne 2 : Vide -->
+            <?php foreach ($products as $product): ?>
             <tr class="other-lines">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><?php echo htmlspecialchars($product['id']); ?></td>
+                <td><?php echo htmlspecialchars($product['nom']); ?></td>
+                <td class="description-cell"><?php echo htmlspecialchars($product['description']); ?></td>
+                <td><?php echo htmlspecialchars($product['prix']); ?></td>
+                <td><?php echo htmlspecialchars($product['quantite']); ?></td>
+                <td><?php echo htmlspecialchars($product['sous-categorie']); ?></td>
+                <td><?php echo htmlspecialchars($product['categorie']); ?></td>
             </tr>
-            <!-- Ligne 3 : Vide -->
-            <tr class="other-lines">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
+            <?php endforeach; ?>
         </table>
+        <?php else: ?>
+        <p>Aucun produit n'est disponible pour le moment.</p>
+        <?php endif; ?>
     </section>
 </main>
 <?php
