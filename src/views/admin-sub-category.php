@@ -3,11 +3,8 @@ include_once(__DIR__ . "/../../include/_head.php");
 include_once(__DIR__ . "/../../include/_header.php");
 
 include('./../models/db.php')
-
-// function LoadImage(){
-    
-// }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
