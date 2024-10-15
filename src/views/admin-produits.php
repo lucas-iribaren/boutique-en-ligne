@@ -20,6 +20,7 @@ include $includePath . '_header.php';
                 <td>ID</td>
                 <td>Nom produit</td>
                 <td class="description-header">Description</td>
+                <td>Image</td>
                 <td>Prix</td>
                 <td>Quantité</td>
                 <td>Sous-catégorie</td>
@@ -30,6 +31,10 @@ include $includePath . '_header.php';
                 <td><?php echo htmlspecialchars($product['id']); ?></td>
                 <td><?php echo htmlspecialchars($product['nom']); ?></td>
                 <td class="description-cell"><?php echo htmlspecialchars($product['description']); ?></td>
+                <td>
+                    <input type="file" id="image-<?php echo htmlspecialchars($product['id']); ?>" name="image-<?php echo htmlspecialchars($product['id']); ?>" accept="image/*" style="display: none;">
+                    <button onclick="document.getElementById('image-<?php echo htmlspecialchars($product['id']); ?>').click();">Ajouter image</button>
+                </td>
                 <td><?php echo htmlspecialchars($product['prix']); ?></td>
                 <td><?php echo htmlspecialchars($product['quantite']); ?></td>
                 <td><?php echo htmlspecialchars($product['sous-categorie']); ?></td>

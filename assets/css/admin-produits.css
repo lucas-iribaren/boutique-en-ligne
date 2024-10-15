@@ -43,7 +43,7 @@
 
 /* Version Mobile - 3 colonnes */
 @media (max-width: 768px) {
-    /* Cacher toutes les colonnes sauf ID, Nom produit et Détail */
+    /* Cache toutes les colonnes sauf ID, Nom produit et Détail */
     .product-table tr th:nth-child(4),
     .product-table tr td:nth-child(4),
     .product-table tr th:nth-child(5),
@@ -55,7 +55,7 @@
         display: none;
     }
 
-    /* Ajuster le style pour la case 'détail' */
+    /* Ajuste le style pour la case 'détail' */
     .product-table .description-header::before {
         content: "Détail";
         visibility: visible;
@@ -98,7 +98,7 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        z-index: 10; /* Assurez-vous que le bouton est au-dessus des autres éléments */
+        z-index: 10;
     }
 }
 
@@ -107,4 +107,18 @@
     .product-table .description-cell::after {
         display: none;
     }
+}
+
+/* Style pour le bouton d'ajout d'image */
+.product-table button {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-table button:hover {
+    background-color: var(--yellow);
 }
