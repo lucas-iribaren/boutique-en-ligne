@@ -51,15 +51,14 @@ ob_start();
         </div>
     </article>
 </section>
-<section>
+<section class="section_categorie">
     <h3>Catégorie</h3>
-    <article class="flex space-around">
-        <a href="#" class="section_phare vertical-center space-center">
+    <article class="article_categorie flex space-around flex-wrap">
+        <a href="#" class="card_categorie">
             <img src="assets/images/jeux_videos.png" class="" alt="Catégorie jeux video">
         </a>
-        <a href="#" class="section_phare vertical-center space-center">
-            <img src="assets/images/film_series.png" class="" alt="Catégorie Films et Séries">
+        <a href="#" class="card_categorie">
+            <img src="assets/images/films_&_series.png" class="" alt="Catégorie Films et Séries">
         </a>
-        <a ></a>
     </article>                
 </section>
