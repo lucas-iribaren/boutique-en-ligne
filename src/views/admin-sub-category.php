@@ -1,12 +1,19 @@
 <?php 
 include_once(__DIR__ . "/../../include/_head.php");
 include_once(__DIR__ . "/../../include/_header.php");
+
+
+
+function LoadImage(){
+    
+}
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="/../../js/admin.js"></script>
     <link rel="stylesheet" href="../../assets/css/admin.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestion</title>

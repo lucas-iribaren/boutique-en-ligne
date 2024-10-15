@@ -23,7 +23,8 @@ include_once(__DIR__ . "/../../include/_header.php");
 
     <section class="container">
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img id="clickable-image" src="../../assets/images/placeholder.png" alt="Click to change image" style="width: 150px; height: auto;">
+            <input type="file" id="image-upload" accept="image/*" style="display: none;">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
