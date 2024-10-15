@@ -24,23 +24,6 @@
     background-color: var(--background);
 }
 
-/* Version Desktop - 7 colonnes */
-@media (min-width: 769px) {
-    .product-table tr th:nth-child(1),
-    .product-table tr th:nth-child(2),
-    .product-table tr th:nth-child(3),
-    .product-table tr th:nth-child(4),
-    .product-table tr th:nth-child(5),
-    .product-table tr th:nth-child(6),
-    .product-table tr th:nth-child(7) {
-        display: table-cell; /* Affiche toutes les colonnes */
-    }
-
-    .product-table .description-cell::after {
-        display: none;
-    }
-}
-
 /* Version Mobile - 3 colonnes */
 @media (max-width: 768px) {
     /* Cache toutes les colonnes sauf ID, Nom produit et Détail */
@@ -55,7 +38,7 @@
         display: none;
     }
 
-    /* Ajuste le style pour la case 'détail' */
+    /* Ajuster le style pour la case 'détail' */
     .product-table .description-header::before {
         content: "Détail";
         visibility: visible;
@@ -67,19 +50,18 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: inherit; /* Hérite la couleur de fond du parent */
+        background-color: inherit;
     }
 
     .product-table .description-header {
         visibility: hidden;
         position: relative;
-        background-color: var(--grey); /* Assure que le fond gris est appliqué */
+        background-color: var(--grey);
     }
 
-    /* Nouveau style pour le bouton '+' */
+    /* Style pour le bouton '+' */
     .product-table .description-cell {
         position: relative;
-        background-color: yellow; /* Temporaire pour le débogage */
     }
 
     .product-table .description-cell::after {
@@ -98,14 +80,6 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
-        z-index: 10;
-    }
-}
-
-/* Version Desktop - cacher le bouton '+' */
-@media (min-width: 769px) {
-    .product-table .description-cell::after {
-        display: none;
     }
 }
 

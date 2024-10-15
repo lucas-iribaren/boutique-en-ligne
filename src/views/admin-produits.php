@@ -52,3 +52,5 @@ include $includePath . '_header.php';
 // Inclusion du footer
 include $includePath . '_footer.php';
 ?>
+
+<script src="/assets/js/admin-produits.js"></script>
