@@ -1,10 +1,15 @@
 <?php
+include_once 'config/config.php';
+
+myAutoload::start();
+
 include_once(__DIR__ . "./include/_head.php");
 include_once(__DIR__ . "./include/_header.php");
 ?>
 <main>
     <?php
     include_once(__DIR__ . "./include/_bandeau.php");
+    
     // Définit la page par défaut 
     $page = isset($_GET['page']) ? $_GET['page'] : 'index';
 
