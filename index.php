@@ -3,8 +3,17 @@ include_once 'config/config.php';
 
 myAutoload::start();
 
+$request = isset($_GET['r']) ? $_GET['r'] : null; // index.php?r...
+
+if ($request == "index")
+{
+    
+}
+
+
 include_once(__DIR__ . "/include/_head.php");
 include_once(__DIR__ . "/include/_header.php");
+
 ?>
 <main>
     <?php
