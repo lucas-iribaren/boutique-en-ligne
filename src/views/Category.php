@@ -1,3 +1,9 @@
+<?php 
+include_once(__DIR__ . "/../../include/_head.php");
+include_once(__DIR__ . "/../../include/_header.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +16,8 @@
     <section class="dropdown">
         <span>🔎</span>
         <section class="dropdown-content">
-            <a href="http://">License 🎟</a>
-            <a href="http://">Prix 💰</a>
+            <a href="http://">🎟</a>
+            <a href="http://">💰</a>
         </section>
     </section>
 
@@ -69,4 +75,4 @@
         <a href="#">...</a>
     </section>
 </body>
-</html>
+</html>  

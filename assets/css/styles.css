@@ -162,7 +162,6 @@ a {
     width: 50px;
 }
 
-/* Formulaire */
 
 input[type="text"] {
     padding: 10px;
@@ -290,6 +289,7 @@ input[type="text"]:focus {
 .dropdown {
     position: relative;
     display: inline-block;
+    padding: 40px;
 }
 
 .dropdown-content {
@@ -341,8 +341,6 @@ input[type="text"]:focus {
 .articles li {
     list-style-type: none;
 }
-
-
 
 .chapters {
     display: flex;
