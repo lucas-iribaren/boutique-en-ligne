@@ -1,13 +1,15 @@
 <?php
 include_once 'config/config.php';
 
+include_once ('src/controllers/HomeController');
+
 myAutoload::start();
 
 $request = isset($_GET['r']) ? $_GET['r'] : null; // index.php?r...
 
 if ($request == "index")
 {
-    
+    include_once (CONTROLLER . 'home.php');
 }
 
 
