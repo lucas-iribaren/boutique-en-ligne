@@ -46,6 +46,7 @@ h3 {
     margin: 0;
     padding: 1em 0;
 }
+
 h4,
 h5 {
     font-family: 'Peralta', serif;
@@ -73,12 +74,14 @@ p {
     text-align: center;
     text-decoration: none;
 }
+
 .btn-primary {
     background-color: var(--blue);
     color: var(--background);
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .btn-ajouter {
     background-color: var(--yellow);
     border: none;
@@ -104,18 +107,21 @@ p {
     margin: 0 auto;
     padding: 20px;
 }
-.section_categorie{
+
+.section_categorie {
     margin: 20px 0;
     border-radius: 10px;
 }
-.section_categorie h3{
-    padding-left: 50px;
 
+.section_categorie h3 {
+    padding: 0;
 }
-.article_categorie{
+
+.article_categorie {
     margin: 0 10px;
     gap: 20px;
 }
+
 .article_phare {
     max-width: 1080px;
     margin: 0 auto;
@@ -133,6 +139,7 @@ footer {
 footer {
     background-color: var(--blue);
 }
+
 .section_phare,
 .section {
     background-color: var(--blue);
@@ -187,6 +194,11 @@ a {
 .flex-wrap {
     flex-wrap: wrap;
 }
+
+.flex-column {
+    flex-direction: column;
+}
+
 .column {
     flex-direction: column;
 }
@@ -217,6 +229,9 @@ a {
     object-fit: contain;
 }
 
+.w-100 {
+    width: 100%;
+}
 
 .hw-50px {
     height: 50px;
@@ -323,7 +338,7 @@ input[type="text"]:focus {
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
     opacity: 1;
-    
+
 }
 
 .carousel-control-prev {
@@ -349,7 +364,8 @@ input[type="text"]:focus {
 .carousel-control-next-icon {
     background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%2380808080" viewBox="0 0 8 8"%3E%3Cpath d="M3.293 1.707L4.586 0.414 8 4l-3.414 3.586-1.293-1.293L5.414 4z"/%3E%3C/svg%3E');
 }
-.carousel-control-product{
+
+.carousel-control-product {
     position: absolute;
     top: 0;
     left: 15%;
@@ -358,6 +374,7 @@ input[type="text"]:focus {
     cursor: pointer;
     z-index: 10;
 }
+
 .carousel-indicators {
     position: absolute;
     right: 0;
@@ -399,9 +416,11 @@ input[type="text"]:focus {
     background-color: #FFFFFF80;
     border-radius: 10px;
 }
+
 .carousel-caption p {
     margin: 0;
 }
+
 /* Media queries */
 
 @media screen and (max-width: 768px) {
@@ -493,19 +512,23 @@ input[type="text"]:focus {
         background-color: var(--blue);
 
     }
+
     /* Phares */
-    .section_phare{
+    .section_phare {
         padding: 0;
     }
-    .article_phare{
+
+    .article_phare {
         border-radius: 0;
     }
+
     .carousel-caption {
         width: 100%;
         right: 0;
         left: 0;
         bottom: 0;
     }
+
     /* Categories */
 
 }
@@ -546,6 +569,7 @@ input[type="text"]:focus {
     align-items: center;
     text-align: center;
 }
+
 .article_phare img,
 .articles img {
     width: 100%;
