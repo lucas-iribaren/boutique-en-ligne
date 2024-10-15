@@ -500,8 +500,14 @@ input[type="text"]:focus {
     .article_phare{
         border-radius: 0;
     }
+    .carousel-caption {
+        width: 100%;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
     /* Categories */
-    
+
 }
 
 
