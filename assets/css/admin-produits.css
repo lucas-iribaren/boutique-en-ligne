@@ -51,23 +51,24 @@
         display: none;
     }
 
-    /* Remplacer "Description" par "Détail" */
+    /* Ajuster le style pour la case 'détail' */
     .product-table .description-header::before {
-        content: "Détail"; /* Affiche "Détail" */
-    }
-
-    /* Masquer le texte original "Description" sans affecter la taille */
-    .product-table .description-header {
-        visibility: hidden;
-        position: relative;
-    }
-
-    .product-table .description-header::before {
+        content: "Détail";
         visibility: visible;
         position: absolute;
         left: 0;
         right: 0;
-        text-align: center;
-        color: inherit;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: inherit; /* Hérite la couleur de fond du parent */
+    }
+
+    .product-table .description-header {
+        visibility: hidden;
+        position: relative;
+        background-color: var(--grey); /* Assure que le fond gris est appliqué */
     }
 }
