@@ -12,7 +12,6 @@ function addUserPage() {
         
         $userRegister = new UserRegister();
         
-        // Appeler la méthode d'inscription
         $userRegister->registerUser($prenom, $nom, $email, $mot_de_passe);
     }
     
