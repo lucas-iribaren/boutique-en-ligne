@@ -20,7 +20,7 @@ include('./../models/db.php')
 <body>
     <section class="container">
         <section class="section">
-            <img id="clickable-image" src="../../assets/images/placeholder.png" alt="Image" style="max-width: 100%; border-radius: 5px;">
+            <img class="upload" id="clickable-image" src="../../assets/images/placeholder.png" alt="Image" style="max-width: 100%; border-radius: 5px;">
             <input type="file" id="image-upload" style="display: none;">
         </section>
         

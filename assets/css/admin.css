@@ -108,3 +108,14 @@ input[type="text"]:focus, textarea:focus {
 textarea {
     width: 100%;
 }
+
+.upload{
+    transition: filter 0.3s ease;
+    cursor: pointer;
+    border:  1px solid black;
+}
+
+
+.upload:hover {
+    filter: grayscale(100%); /* Makes the image grayscale on hover */
+}
