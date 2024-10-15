@@ -87,7 +87,18 @@ p {
     margin: 0 auto;
     padding: 20px;
 }
+.section_categorie{
+    margin: 20px 0;
+    border-radius: 10px;
+}
+.section_categorie h3{
+    padding-left: 50px;
 
+}
+.article_categorie{
+    margin: 0 10px;
+    gap: 20px;
+}
 .article_phare {
     max-width: 1080px;
     margin: 0 auto;
@@ -96,9 +107,6 @@ p {
     background-color: var(--blue);
 }
 
-
-
-/* Sections et fonds */
 header,
 footer {
     padding: 20px;
@@ -139,11 +147,29 @@ a {
     color: #333;
 }
 
+.card_categorie {
+    background-color: var(--yellow);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_categorie img {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
 /* Flexbox */
 .flex {
     display: flex;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
 .column {
     flex-direction: column;
 }
