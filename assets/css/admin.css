@@ -117,5 +117,5 @@ textarea {
 
 
 .upload:hover {
-    filter: grayscale(100%); /* Makes the image grayscale on hover */
+    filter: brightness(0.8);
 }
