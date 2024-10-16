@@ -362,3 +362,44 @@ input[type="text"]:focus {
 .chapters a:hover {
     background-color: var(--white);
 }
+
+
+/* form inscription */
+.main-inscription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--light-grey);
+}
+
+.form-inscription {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 500px;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--grey);
+    border-radius: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--dark-grey);
+}
+
+.form-control, input[type="text"] {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #33333350;
+    width: 80%;
+    font-size: 1em;
+}

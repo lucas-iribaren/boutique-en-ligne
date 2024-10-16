@@ -23,7 +23,7 @@
         </div>
     </nav>
     <a href="index.php">
-        <img src="assets/images/logo.png" class="logo" alt="logo">
+        <img src="./assets/images/logo.png" class="logo" alt="logo">
     </a>
     <h1 class="hide_mobile">Pixel Plush</h1>
     <nav class="flex space-center vertical-center gap">
@@ -38,7 +38,7 @@
             if (isset($_SESSION['user'])) {
                 echo "Bonjour" . $_SESSION['user']['prenom'];
             } else {
-                echo 'Connexion';
+                echo '<a href="index.php?page=inscription">Inscription</a><br><a href="index.php?page=connexion">Connexion</a>';
             }
             ?>
         </a>

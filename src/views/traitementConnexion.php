@@ -2,25 +2,26 @@
 
 session_start();
 
-require 'src/models/connexion.php';
+require_once 'src/models/connexiondb.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
-    // Récupérer et nettoyer les données du formulaire
+$connexion = connexionBDD();
+
+if ($connexion === null) {
+    die("Impossible de se connecter à la base de données");
+
+}
+
+require_once 'src/models/ModelsUserRegister.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = trim($_POST['email']);
     $mot_de_passe = trim($_POST['mot_de_passe']);
 
-    $connexion = connexionBDD();
+    $user = new UserRegister();
 
-    $query = $connexion->prepare("SELECT * FROM Utilisateur WHERE email = ?");
-    $query->execute([$email]);
+    $user->connexionUser($email, $mot_de_passe);
 
-    $user = $query->fetch(PDO::FETCH_ASSOC);
-
-    if ($user && password_verify($mot_de_passe, $user['mot_de_passe'])) {
-        $_SESSION['user'] = $user;
-        header('Location: ../index.php?page=profil');
-    } else {
-        echo "Adresse email ou mot de passe incorrect.";
+    if ($user->connexionUser($email, $mot_de_passe)) {
+        header('Location: index.php?page=profil');
     }
-
 }

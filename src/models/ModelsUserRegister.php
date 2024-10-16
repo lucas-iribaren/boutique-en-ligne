@@ -1,25 +1,24 @@
 <?php
 
-require 'connexion.php';
+require_once 'connexiondb.php';
 
 class UserRegister
 {
     private $connexion;
 
-    // Constructor to initialize the database connection
+
     public function __construct()
     {
         $this->connexion = $this->connexionBDD();
         $this->connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    // Method to handle the database connection
+    
     private function connexionBDD()
     {
-        return connexionBDD(); // This assumes that the connexionBDD() function is defined in 'connexion.php'
+        return connexionBDD();
     }
 
-    // Method to register a user
     public function registerUser($prenom, $nom, $email, $mot_de_passe)
     {
         $date_inscription = date('Y-m-d h:i:s');
@@ -38,6 +37,30 @@ class UserRegister
             echo "L'utilisateur a été ajouté avec succès.";
         } catch (PDOException $e) {
             echo "Erreur lors de l'ajout de l'utilisateur : " . $e->getMessage();
+        }
+    }
+
+    public function connexionUser($email, $mot_de_passe)
+    {
+        $requete = $this->connexion->prepare("SELECT id, nom, prenom, email, role_id FROM Utilisateur WHERE email = ?");
+
+        try {
+            $requete->execute([$email]);
+            $user = $requete->fetch(PDO::FETCH_ASSOC);
+
+            if ($user && password_verify($mot_de_passe, $user['mot_de_passe'])) {
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_prenom'] = $user['prenom'];
+                $_SESSION['user_nom'] = $user['nom'];
+                $_SESSION['user_email'] = $user['email'];
+                $_SESSION['user_role_id'] = $user['role_id'];
+                return true;
+            } else {
+                echo "Adresse email ou mot de passe incorrect.";
+                return false;
+            }
+        } catch (PDOException $e) {
+            echo "Erreur lors de la connexion : " . $e->getMessage();
         }
     }
 }

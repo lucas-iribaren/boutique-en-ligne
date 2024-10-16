@@ -1,6 +1,6 @@
 <?php
 
-require 'src/models/ModelsUsers.php';
+require_once 'src/models/ModelsUserRegister.php';
 
 function addUserPage() {
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
@@ -15,5 +15,5 @@ function addUserPage() {
         $userRegister->registerUser($prenom, $nom, $email, $mot_de_passe);
     }
     
-    require 'src/views/inscription.php';
+    require 'views/inscription.php';
 }

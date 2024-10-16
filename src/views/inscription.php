@@ -1,5 +1,9 @@
+<?php
+$title = 'Inscription';
+?>
+
 <main class="main-inscription">
-    <form action="" class="form-inscription" method="post">
+    <form action="index.php?page=connexion" class="form-inscription" method="post">
         <div class="form-group">
             <label for="prenom">Prénom</label>
             <input type="text" class="form-control" id="prenom" name="prenom" required aria-describedby="prenomHelp">
@@ -40,4 +44,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $userRegister = new UserRegister();
     
     $userRegister->registerUser($prenom, $nom, $email, $mot_de_passe);
+    header('Location: index.php?page=connexion');
 }
