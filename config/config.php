@@ -23,24 +23,22 @@ class myAutoload
 
     public static function autoload($class)
     {
-        $classPath = str_replace('\\', '/', $class);
-
-        if(file_exists(MODEL . $classPath . 'php'))
+        if(file_exists(MODEL . $class . '.php'))
         {
-            include_once MODEL . $classPath . 'php';
+            include_once MODEL . $class . '.php';
         } 
         
-        elseif (file_exists(CONTROLLER . $classPath . 'php'))
+        elseif (file_exists(CLASSES . $class . '.php'))
         {
-            include_once CONTROLLER . $classPath . 'php';
+            include_once CLASSES . $class . '.php';
         } 
 
-        elseif (file_exists(VIEW . $classPath . '.php'))
+        elseif (file_exists(CONTROLLER . $class . '.php'))
         {
-            include_once VIEW . $classPath . '.php';
+            include_once CONTROLLER . $class . '.php';
         }
-        
-        else {
+        else 
+        {
             throw new Exception("Class $class not found.");
         }
     }

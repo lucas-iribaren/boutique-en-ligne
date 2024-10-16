@@ -1,6 +1,6 @@
 <?php
 
-class Home
+class HomeController
 {
     // Pour afficher la page index (en POO)
     public function showHome()

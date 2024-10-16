@@ -1,8 +1,4 @@
 <?php
-include_once(CONTROLLER . 'HomeController.php');
-
-
-
 // Classe Routeur qui gère les routes et appelle les controllers
 class Routeur
 {
@@ -10,8 +6,8 @@ class Routeur
     
     // Tableau de correspondance entre les routes et les controllers
     private $routes = [ 
-                            "index"  => ["controller" => 'Home', "method" => 'showHome'], 
-                            "panier" => ["controller" => 'Home', "method" => 'showPanier'],
+                            "index"  => ["controller" => 'HomeController', "method" => 'showHome'], 
+                            "panier" => ["controller" => 'HomeController', "method" => 'showPanier'],
                       ];
 
     public function __construct($request)
