@@ -16,6 +16,7 @@ class myAutoload
         define('CONTROLLER', ROOT . 'src/controllers/');
         define('VIEW', ROOT . 'src/views/');
         define('MODEL', ROOT . 'src/models/');
+        define('CLASSES', ROOT . 'classes/');
 
         define('ASSETS', HOST . 'assets/');
     }
