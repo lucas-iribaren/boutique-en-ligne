@@ -1,6 +1,5 @@
 <?php
 $title = 'Mon Panier';
-ob_start();
 ?>
     <main id="panier">
     <section class="section">

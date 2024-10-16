@@ -1,4 +1,7 @@
 <?php
+include_once(CONTROLLER . 'HomeController.php');
+include_once(CONTROLLER . 'PanierController.php');
+
 
 // Classe Routeur qui gère les routes et appelle les controllers
 class Routeur
@@ -7,8 +10,8 @@ class Routeur
     
     // Tableau de correspondance entre les routes et les controllers
     private $routes = [ 
-                            "index"  => "HomeController", 
-                            "panier" => "PanierController"
+                            "index"  => ["controller" => 'Home', "method" => 'showHome'], 
+                            "panier" => ["controller" => 'Panier', "method" => 'showPanier'],
                       ];
 
     public function __construct($request)
@@ -24,8 +27,8 @@ class Routeur
         if(array_key_exists($request, $this->routes)) 
         {
             // Récupère le contrôleur associé à la requête
-            $controller = $this->routes[$request];
-            include_once (CONTROLLER . $controller . '.php');
+            $controller = $this->routes[$request]['controller'];
+            $method     = $this->routes[$request]['method'];
 
             $currentController = new $controller();
             $currentController->$method();

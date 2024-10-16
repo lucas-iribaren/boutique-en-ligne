@@ -22,13 +22,13 @@
             <span></span>
         </div>
     </nav>
-    <a href="index.php">
+    <a href="index">
         <img src="assets/images/logo.png" class="logo" alt="logo">
     </a>
     <h1 class="hide_mobile">Pixel Plush</h1>
     <nav class="flex space-center vertical-center gap">
         <input class="hide_mobile" type="text" placeholder="Rechercher">
-        <a class="hide_mobile" href="index.php?page=panier">
+        <a class="hide_mobile" href="panier">
             <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
             Panier
         </a>
