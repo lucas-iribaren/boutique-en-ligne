@@ -7,6 +7,11 @@ class Home
     {
         include_once (VIEW.'index.php'); // Mettre un "/" devant index.php en cas de problème
     }
+
+    public function showPanier()
+    {
+        include_once (VIEW.'panier.php'); // Mettre un "/" devant index.php en cas de problème
+    }
 }
 
 
