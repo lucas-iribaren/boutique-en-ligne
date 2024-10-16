@@ -1,18 +1,13 @@
 <?php
 include_once 'config/config.php';
 
-include_once ('src/controllers/HomeController');
-
+// Autoloader pour charger les classes
 myAutoload::start();
 
-$request = isset($_GET['r']) ? $_GET['r'] : null; // index.php?r...
+// Récupération de la route (paramètre 'r' dans l'URL)
+$request = $_GET['r'] ?? 'index';  // Route par défaut : 'index'
 
-if ($request == "index")
-{
-    include_once (CONTROLLER . 'home.php');
-}
-
-
+// Inclure l'en-tête et le header
 include_once(__DIR__ . "/include/_head.php");
 include_once(__DIR__ . "/include/_header.php");
 
@@ -21,20 +16,21 @@ include_once(__DIR__ . "/include/_header.php");
     <?php
     include_once(__DIR__ . "/include/_bandeau.php");
 
-    // Définit la page par défaut 
-    $page = isset($_GET['page']) ? $_GET['page'] : 'index';
+    // Gestion des routes
+    switch ($request) {
+        case 'index':
+            include_once(CONTROLLER . 'HomeController.php');
+            break;
+        // Ajouter d'autres routes ici
 
-    // Chemin du fichier correspondant à la page
-    $file = __DIR__ . "/src/views/" . $page . ".php";
-
-    // Vérifie si le chemain existe, sinon affiche une erreur
-    if (file_exists($file)) {
-        require_once($file);
-    } else {
-        require_once(__DIR__ . "/src/views/page404.php");
+        default:
+            // Si la route n'existe pas, afficher la page 404
+            include_once(__DIR__ . "/src/views/page404.php");
+            break;
     }
     ?>
 </main>
 <?php
+// Inclure le pied de page
 include_once(__DIR__ . "/include/_footer.php");
 ?>

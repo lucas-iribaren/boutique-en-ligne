@@ -11,9 +11,9 @@ class myAutoload
         $host = $_SERVER['HTTP_HOST'];
 
         define('HOST', 'http://' . $host . '/boutique-en-ligne/');
-        define('ROOT', $root . 'boutique-en-ligne/');
+        define('ROOT', $root . '/boutique-en-ligne/');
 
-        define('CONTROLLER', ROOT . 'src/controller/');
+        define('CONTROLLER', ROOT . 'src/controllers/');
         define('VIEW', ROOT . 'src/views/');
         define('MODEL', ROOT . 'src/models/');
 

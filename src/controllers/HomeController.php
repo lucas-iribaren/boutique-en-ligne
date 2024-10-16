@@ -1,5 +1,3 @@
 <?php
-include_once('../config/config.php');
-
-include_once ('../views/index.php');
+include_once (VIEW.'/index.php');
 ?>
