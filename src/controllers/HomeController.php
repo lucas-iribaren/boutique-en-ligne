@@ -19,5 +19,13 @@ class HomeController
         $myView->setVars(['title' => $title]);
         $myView->render();
     }
+
+    public function show404()
+    {
+        $title = 'Erreur 404';
+        $myView = new View('page404');
+        $myView->setVars(['title' => $title]);
+        $myView->render();
+    }
 }
 ?>
