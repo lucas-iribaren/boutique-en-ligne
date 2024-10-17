@@ -5,13 +5,15 @@ class HomeController
     // Pour afficher la page index
     public function showHome()
     {
-       include_once (VIEW.'index.php'); 
+        $myView = new View('index');
+        $myView->render(); // Passer les variables dans les parenthèse pour afficher les objets
     }
 
     // Pour afficher la page panier
     public function showPanier()
     {
-        include_once (VIEW.'panier.php');
+        $myView = new View('panier');
+        $myView->render();
     }
 }
 ?>
