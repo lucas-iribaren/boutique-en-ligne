@@ -1,10 +1,6 @@
-<?php
-$title = 'Mon Panier';
-ob_start();
-?>
-    <main id="panier">
+<main id="panier">
     <section class="section">
-            <h2>Panier :</h2>
+        <h2>Panier :</h2>
             <section>
                 <input type="checkbox">
                 <img src="creeper.png" alt="Peluche creeper">
@@ -31,5 +27,5 @@ ob_start();
                 <p>Total de la commande : 27€ (2 articles)</p>
                 <button class="btn-ajouter">Valider la commande</button>
             </section>
-        </section>
-    </main>
+    </section>
+</main>
