@@ -9,7 +9,7 @@
     <link rel="icon" type="favicon" href="<?php echo ASSETS;?>/images/favicon.ico">
     <link rel="stylesheet" href="<?php echo ASSETS;?>/css/styles.css">
     <link rel="stylesheet" href="<?php echo ASSETS;?>/css/admin-produits.css">
-    <title><?php echo $title ?? 'Titre par défaut'; ?></title></head>
+    <title><?php echo $title ?? 'Pixel Plush'; ?></title></head>
 <body>
 <header class="flex space-between center vertical-center">
     <div class="off-screen-menu hide_desktop">
