@@ -3,7 +3,7 @@
     <div class="off-screen-menu hide_desktop">
         <ul>
             <li>
-                <a class="#" href="#">Panier
+                <a class="#" href="panier">Panier
                     <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
                 </a>
             </li>
