@@ -34,17 +34,19 @@ include $includePath . '_header.php';
                 <td>Actions</td>
             </tr>
             <?php foreach ($products as $product): ?>
-            <tr>
+            <tr data-product-id="<?php echo $product['id']; ?>">
                 <td><?php echo htmlspecialchars($product['id']); ?></td>
-                <td><?php echo htmlspecialchars($product['nom']); ?></td>
-                <td><?php echo htmlspecialchars($product['description']); ?></td>
+                <td class="editable" data-field="nom"><?php echo htmlspecialchars($product['nom']); ?></td>
+                <td class="editable" data-field="description"><?php echo htmlspecialchars($product['description']); ?></td>
                 <td><img src="../../assets/images/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['nom']); ?>" width="50"></td>
-                <td><?php echo htmlspecialchars($product['prix']); ?> €</td>
-                <td><?php echo htmlspecialchars($product['quantite']); ?></td>
-                <td><?php echo htmlspecialchars($product['nom_sc']); ?></td>
-                <td><?php echo htmlspecialchars($product['nom_p']); ?></td>
+                <td class="editable" data-field="prix"><?php echo htmlspecialchars($product['prix']); ?> €</td>
+                <td class="editable" data-field="quantite"><?php echo htmlspecialchars($product['quantite']); ?></td>
+                <td class="editable" data-field="nom_sc"><?php echo htmlspecialchars($product['nom_sc']); ?></td>
+                <td class="editable" data-field="nom_p"><?php echo htmlspecialchars($product['nom_p']); ?></td>
                 <td>
-                    <a href="edit-produit.php?id=<?php echo $product['id']; ?>" class="btn btn-edit">Modifier</a>
+                    <button class="btn btn-edit">Modifier</button>
+                    <button class="btn btn-save" style="display: none;">Enregistrer</button>
+                    <button class="btn btn-cancel" style="display: none;">Annuler</button>
                     <a href="delete-produit.php?id=<?php echo $product['id']; ?>" class="btn btn-delete" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?');">Supprimer</a>
                 </td>
             </tr>
@@ -55,10 +57,9 @@ include $includePath . '_header.php';
         <?php endif; ?>
     </section>
 </main>
-<script src="/assets/js/admin-produits.js"></script>
+<script src="../../assets/js/admin-produits.js"></script>
 <?php
 
 // Inclusion du footer
 include $includePath . '_footer.php';
 ?>
-
