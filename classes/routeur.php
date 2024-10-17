@@ -8,7 +8,9 @@ class Routeur
     private $routes = [ 
         "index"  => ["controller" => 'HomeController', "method" => 'showHome'], 
         "panier" => ["controller" => 'HomeController', "method" => 'showPanier'],
-        "page404" => ["controller" => 'HomeController', "method" => 'show404']
+        "page404" => ["controller" => 'HomeController', "method" => 'show404'],
+        "Category" => ["controller" => 'HomeController', "method" => 'showCategory'],
+        "profil" => ["controller" => 'HomeController', "method" => 'showProfil']
     ];
 
     public function __construct($request)

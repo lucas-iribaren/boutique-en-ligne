@@ -27,5 +27,21 @@ class HomeController
         $myView->setVars(['title' => $title]);
         $myView->render();
     }
+
+    public function showCategory()
+    {
+        $title = 'Category';
+        $myView = new View('Category');
+        $myView->setVars(['title' => $title]);
+        $myView->render();
+    }
+
+    public function showProfil()
+    {
+        $title = 'Mon Profil';
+        $myView = new View('profil');
+        $myView->setVars(['title' => $title]);
+        $myView->render();
+    }
 }
 ?>
