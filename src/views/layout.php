@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Peralta&display=swap" rel="stylesheet">
     <link rel="icon" type="favicon" href="<?php echo ASSETS;?>/images/favicon.ico">
     <link rel="stylesheet" href="<?php echo ASSETS;?>/css/styles.css">
+    <link rel="stylesheet" href="<?php echo ASSETS;?>/css/admin-produits.css">
     <title><?php echo $title ?? 'Titre par défaut'; ?></title></head>
 <body>
 <header class="flex space-between center vertical-center">
