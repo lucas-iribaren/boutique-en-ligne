@@ -10,7 +10,7 @@ if ($request === 'index') {
 } elseif ($request === 'panier') {
     $title = 'Mon Panier';
 } else {
-    $title = 'Erreur 404'; // Titre par défaut pour les pages non définies
+    $title = 'Erreur 404';
 }
 
 // Autoloader pour charger les classes
