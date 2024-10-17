@@ -14,7 +14,7 @@ class HomeController
     // Pour afficher la page panier
     public function showPanier()
     {
-        $title = "Mon Panier";
+        $title = "Pixel Plush - Mon Panier";
         $myView = new View('panier');
         $myView->setVars(['title' => $title]);
         $myView->render();
