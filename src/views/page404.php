@@ -1,1 +1,1 @@
-<p>ERREUR 404 : page non trouvée<p>
+<p>ERREUR 404 : page non trouvée.<p>
