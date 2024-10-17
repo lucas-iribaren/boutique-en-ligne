@@ -2,20 +2,16 @@
 
 class HomeController
 {
-    // Pour afficher la page index (en POO)
+    // Pour afficher la page index
     public function showHome()
     {
-        include_once (VIEW.'index.php'); // Mettre un "/" devant index.php en cas de problème
+       include_once (VIEW.'index.php'); 
     }
 
+    // Pour afficher la page panier
     public function showPanier()
     {
-        include_once (VIEW.'panier.php'); // Mettre un "/" devant index.php en cas de problème
+        include_once (VIEW.'panier.php');
     }
 }
-
-
-
-
-
 ?>
