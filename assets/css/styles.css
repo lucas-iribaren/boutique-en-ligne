@@ -355,7 +355,7 @@ input[type="text"]:focus {
     width: 70%;
     height: 100%;
     cursor: pointer;
-    z-index: 10;
+    z-index: 2;
 }
 .carousel-indicators {
     position: absolute;
@@ -391,7 +391,7 @@ input[type="text"]:focus {
     position: absolute;
     right: 15%;
     bottom: 10px;
-    z-index: 10;
+    z-index: 2;
     width: 20%;
     margin: auto;
     text-align: center;
@@ -400,107 +400,6 @@ input[type="text"]:focus {
 }
 .carousel-caption p {
     margin: 0;
-}
-/* Media queries */
-
-@media screen and (max-width: 768px) {
-    .hide_mobile {
-        display: none;
-    }
-
-    /* Menu*/
-    .burger {
-        display: block;
-    }
-
-    .off-screen-menu {
-        background-color: #333;
-        height: 100vh;
-        width: 100%;
-        max-width: 450px;
-        position: fixed;
-        top: 0;
-        left: -450px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        font-size: 2rem;
-        transition: 0.3s ease;
-
-    }
-
-    .off-screen-menu li {
-        list-style: none;
-        margin: 20px 0;
-
-    }
-
-    .off-screen-menu a {
-        color: var(--background);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 20px
-    }
-
-    .off-screen-menu.active {
-        left: 0px;
-    }
-
-    .ham-menu {
-        height: 50px;
-        width: 50px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .ham-menu span {
-        height: 5px;
-        width: 100%;
-        background-color: #333;
-        border-radius: 25px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        transition: 0.3s ease;
-    }
-
-    .ham-menu span:nth-child(1) {
-        top: 25%;
-    }
-
-    .ham-menu span:nth-child(3) {
-        top: 75%;
-    }
-
-    .ham-menu.active span:nth-child(1) {
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-        background-color: var(--blue);
-    }
-
-    .ham-menu.active span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .ham-menu.active span:nth-child(3) {
-        top: 50%;
-        transform: translate(-50%, -50%) rotate(-45deg);
-        background-color: var(--blue);
-
-    }
-    /* Phares */
-    .section_phare{
-        padding: 0;
-    }
-    .article_phare{
-        border-radius: 0;
-    }
-    /* Categories */
-    
 }
 
 
@@ -576,4 +475,107 @@ input[type="text"]:focus {
 
 .chapters a:hover {
     background-color: var(--white);
+}
+/* Media queries */
+
+@media screen and (max-width: 768px) {
+
+
+    .hide_mobile {
+        display: none;
+    }
+
+    /* Menu*/
+    .burger {
+        display: block;
+    }
+
+    .off-screen-menu {
+        background-color: #333;
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        left: -450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 2rem;
+        transition: 0.3s ease;
+        z-index: 3;
+    }
+
+    .off-screen-menu li {
+        list-style: none;
+        margin: 20px 0;
+
+    }
+
+    .off-screen-menu a {
+        color: var(--background);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px
+    }
+
+    .off-screen-menu.active {
+        left: 0px;
+    }
+
+    .ham-menu {
+        height: 50px;
+        width: 50px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .ham-menu span {
+        height: 5px;
+        width: 100%;
+        background-color: #333;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.3s ease;
+    }
+
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        background-color: var(--blue);
+    }
+
+    .ham-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        background-color: var(--blue);
+
+    }
+    /* Phares */
+    .section_phare{
+        padding: 0;
+    }
+    .article_phare{
+        border-radius: 0;
+    }
+    /* Categories */
+    
 }
