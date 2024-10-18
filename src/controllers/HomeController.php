@@ -30,7 +30,7 @@ class HomeController
 
     public function showCategories()
     {
-        $title = 'categories';
+        $title = 'Pixel Plush - Categories';
         $myView = new View('categories');
         $myView->setVars(['title' => $title]);
         $myView->render();
@@ -38,7 +38,7 @@ class HomeController
 
     public function showProfil()
     {
-        $title = 'Mon Profil';
+        $title = 'Pixel Plush - Mon Profil';
         $myView = new View('profil');
         $myView->setVars(['title' => $title]);
         $myView->render();
@@ -46,7 +46,7 @@ class HomeController
 
     public function showConnexion()
     {
-        $title = 'Connexion';
+        $title = 'Pixel Plush - Connexion';
         $myView = new View('connexion');
         $myView->setVars(['title' => $title]);
         $myView->render();
@@ -54,7 +54,7 @@ class HomeController
 
     public function showDetail()
     {
-        $title = 'Détails';
+        $title = 'Pixel Plush - Détails';
         $myView = new View('detail');
         $myView->setVars(['title' => $title]);
         $myView->render();
