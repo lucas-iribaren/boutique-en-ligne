@@ -4,7 +4,7 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <div class="product-details">
-                    <img src="./assets/images/peluche.png" alt="Produit 1">
+                    <img src="<?php echo ASSETS;?>/images/peluche.png" alt="Produit 1">
                     <div class="carousel-caption">
                         <h5>
                             Produit 1
@@ -16,7 +16,7 @@
                 </div>
                 <div class="carousel-item">
                 <div class="product-details">
-                    <img src="./assets/images/placeholder.png" alt="Produit 1">
+                    <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Produit 1">
                     <div class="carousel-caption">
                         <h5>
                         </h5>
@@ -26,7 +26,7 @@
                 </div>
                 <div class="carousel-item">
                     <div class="product-details">
-                        <img src="./assets/images/placeholder.png" alt="Produit 3">
+                        <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Produit 3">
                         <div class="carousel-caption">
                             <h5>
                             </h5>
@@ -49,10 +49,10 @@
     <h3>Catégorie</h3>
     <article class="article_categorie flex space-around flex-wrap">
         <a href="categories" class="card_categorie">
-            <img src="assets/images/jeux_videos.png" class="" alt="Catégorie jeux video">
+            <img src="<?php echo ASSETS;?>/images/jeux_videos.png" class="" alt="Catégorie jeux video">
         </a>
         <a href="categories" class="card_categorie">
-            <img src="assets/images/films_&_series.png" class="" alt="Catégorie Films et Séries">
+            <img src="<?php echo ASSETS;?>/images/films_&_series.png" class="" alt="Catégorie Films et Séries">
         </a>
     </article>
 </section>

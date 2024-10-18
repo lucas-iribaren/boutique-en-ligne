@@ -8,7 +8,7 @@
 
     <section class="container">
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -17,7 +17,7 @@
         </section>
 
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -26,7 +26,7 @@
         </section>
 
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -35,7 +35,7 @@
         </section>
 
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -44,7 +44,7 @@
         </section>
 
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>

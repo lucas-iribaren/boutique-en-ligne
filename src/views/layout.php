@@ -26,7 +26,7 @@
                 </li>
                 <li>
                     <a href="#">Rechercher
-                        <img class="hw-50px" src="assets/images/loupe.png" alt="loupe logo">
+                        <img class="hw-50px" src="<?php echo ASSETS;?>/images/loupe.png" alt="loupe logo">
                     </a>
                 </li>
             </ul>
@@ -40,17 +40,17 @@
             </div>
         </nav>
         <a href="index">
-            <img src="assets/images/logo.png" class="logo" alt="logo">
+            <img src="<?php echo ASSETS;?>/images/logo.png" class="logo" alt="logo">
         </a>
         <h1 class="hide_mobile">Pixel Plush</h1>
         <nav class="flex space-center vertical-center gap">
             <input class="hide_mobile" type="text" placeholder="Rechercher">
             <a class="hide_mobile" href="panier">
-                <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
+                <img class="hw-50px" src="<?php echo ASSETS;?>/images/panier.png" alt="panier logo">
                 Panier
             </a>
             <a class="flex column vertical-center" href="connexion">
-                <img class="hw-50px" src="assets/images/utilisateur.png" alt="utilisateur logo">
+                <img class="hw-50px" src="<?php echo ASSETS;?>/images/utilisateur.png" alt="utilisateur logo">
                 <?php
                 if (isset($_SESSION['user'])) {
                     echo "Bonjour" . $_SESSION['user']['prenom'];
@@ -79,7 +79,7 @@
         <p>&copy; Pixel Plush 2024</p>
     </footer>
 
-    <script src="<?php echo ASSETS;?>//js/burger.js"></script>
+    <script src="<?php echo ASSETS;?>/js/burger.js"></script>
     <script src="<?php echo ASSETS;?>/js/ancre.js"></script>
 
 </body>
