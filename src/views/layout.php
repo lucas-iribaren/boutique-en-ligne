@@ -79,7 +79,7 @@
         <p>&copy; Pixel Plush 2024</p>
     </footer>
 
-    <script src="<?php echo ASSETS;?>/js/burger.js"></script>
+    <script src="<?php echo ASSETS;?>//js/burger.js"></script>
     <script src="<?php echo ASSETS;?>/js/ancre.js"></script>
 
 </body>
