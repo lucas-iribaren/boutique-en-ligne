@@ -1,16 +1,10 @@
 <?php
-// Définition du chemin correct vers le dossier 'include'
-$includePath = __DIR__ . '/../../include/';
-
-include '../controllers/ProduitController.php';
 
 $produitController = new ProduitController();
 $products = $produitController->getAllProducts();
 
 
-// Inclusion des fichiers
-include $includePath . '_head.php';
-include $includePath . '_header.php';
+
 
 // Ajout du main avec la section
 ?>
@@ -62,11 +56,8 @@ var categories = <?php echo json_encode($categories); ?>;
 var sousCategories = <?php echo json_encode($sousCategories); ?>;
 </script>
 <script src="../../assets/js/admin-produits.js"></script>
-<?php
 
-// Inclusion du footer
-include $includePath . '_footer.php';
-?>
+
 
 <style>
 .product-table .editable input,
