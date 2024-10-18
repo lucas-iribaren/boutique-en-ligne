@@ -211,6 +211,10 @@ a {
     gap: 20px;
 }
 
+.liste-none {
+    list-style: none;
+}
+
 /* Images */
 .logo {
     height: 100px;

@@ -21,7 +21,7 @@ class Utilisateur
 
     public function register($prenom, $nom, $email, $mot_de_passe, $id_adresse = null, $role_id= 2)
     {
-        $this->db->query("INSERT INTO utilisateurs (id, prenom, nom, email, mot_de_passe, id_adresse, role_id) VALUES (null, ?, ?, ?, ?, ?, ?)");
+        $this->db->query("INSERT INTO Utilisateur (id, prenom, nom, email, mot_de_passe, id_adresse, role_id) VALUES (null, ?, ?, ?, ?, ?, ?)");
         $this->db->bind(1, $prenom);
         $this->db->bind(2, $nom);
         $this->db->bind(3, $email);
@@ -33,7 +33,7 @@ class Utilisateur
 
     public function login($email, $mot_de_passe)
     {
-        $this->db->query("SELECT * FROM utilisateurs WHERE email = ?");
+        $this->db->query("SELECT * FROM Utilisateur WHERE email = ?");
         $this->db->bind(1, $email);
         $row = $this->db->single();
         $hashed_password = $row->mot_de_passe;
