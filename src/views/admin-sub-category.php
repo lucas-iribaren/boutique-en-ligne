@@ -1,8 +1,10 @@
 <?php 
 include_once(__DIR__ . "/../../include/_head.php");
 include_once(__DIR__ . "/../../include/_header.php");
-
 include('./../models/db.php');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 ?>
 
 <!DOCTYPE html>
@@ -15,36 +17,17 @@ include('./../models/db.php');
     <title>Gestion</title>
 </head>
 <body>
-    <form action="admin-treatments.php" method="post">
-        <section class="container">
-            <section class="section">
-                <img class="upload" id="clickable-image" src="../../assets/images/placeholder.png" alt="Image" style="max-width: 100%; border-radius: 5px;">
-                <input  type="file" id="image-upload" style="display: none;">
-            </section>
-            
-            <section class="section">
-                <textarea name="desc" id="desc" rows="4" placeholder="Description"></textarea>
-            </section>
-        </section>
-        
+    <form action="../controllers/admin-treatments.php" method="post" enctype="multipart/form-data">
         <section class="container">
             <section class="section">
                 <img class="logo" src="../../assets/images/logo.png" alt="" srcset="">
                 <label for="categories">Nom de Categories</label>
-                <input type="text" id="categories" placeholder="Name" name='nom'>
+                <input type="text" id="categories" placeholder="Name" name="nom">
             </section>
-            
             <section class="section">
-                <label for="tendances">Tendances</label>
-                <input type="text" id="tendances" placeholder="Search" name='trend'>
+                <textarea name="desc" id="desc" rows="4" placeholder="Description"></textarea>
             </section>
-            
-            <!-- <section class="section">
-                <label for="tags">Tags</label>
-                <input type="text" id="tags" placeholder="Name">
-            </section> -->
-            
-            <button name="sub" class="btn-ajouter" type="submit">Valider</button>
+            <input type="submit" class="btn btn-ajouter" value="valid">
         </section>
     </form>
 </body>

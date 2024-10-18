@@ -1,27 +1,23 @@
 <?php
-include('db.php');
+require_once('db.php');
 
 class CategoryModel
 {
-    private $bdd; 
-    private $id;
-    private $nom;
-    private $description;
+    private $connexion;
 
-    public function __construct($bdd, $id = null, $nom = '', $description = '') {
-        $this->bdd = $bdd; 
-        $this->id = $id;
-        $this->nom = $nom;
-        $this->description = $description;
+    public function __construct()
+    {
+        $this->connexion = connexionBDD();
+        $this->connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
 
-    public function AddCat() {
-        $stmt = $this->bdd->prepare('INSERT INTO SousCategorie (nom, description) VALUES (?, ?)');
-        $stmt->execute([$this->nom, $this->description]);
+    public function AddCat($nom, $description) {
+        $stmt = $this->connexion->prepare('INSERT INTO SousCategorie (id, nom_sc, description_sc) VALUES (null, ?, ?)');
+        $stmt->execute([$nom, $description]);
     }
 
     public function Search($description) {
-        $stmt = $this->bdd->prepare('SELECT * FROM SousCategorie WHERE description = ?');
+        $stmt = $this->connexion->prepare('SELECT * FROM SousCategorie WHERE description_sc = ?'); // Ensure column name matches
         $stmt->execute([$description]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

@@ -5,8 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const productId = this.id.split('-')[1];
             if (file) {
                 console.log(`File selected for product ${productId}:`, file.name);
-                // Ici, vous pouvez ajouter la logique pour envoyer le fichier au serveur
-            }
         });
     });
 });
