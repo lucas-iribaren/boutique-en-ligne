@@ -44,7 +44,7 @@
             <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
             Panier
         </a>
-        <a class="flex column vertical-center" href="#">
+        <a class="flex column vertical-center" href="connexion">
             <img class="hw-50px" src="assets/images/utilisateur.png" alt="utilisateur logo">
             <?php
             if (isset($_SESSION['user'])) {
