@@ -36,16 +36,16 @@ include $includePath . '_header.php';
             <?php foreach ($products as $product): ?>
             <tr data-product-id="<?php echo $product['id']; ?>">
                 <td><?php echo htmlspecialchars($product['id']); ?></td>
-                <td class="editable" data-field="nom"><?php echo htmlspecialchars($product['nom']); ?></td>
-                <td class="editable" data-field="description"><?php echo htmlspecialchars($product['description']); ?></td>
+                <td class="editable" data-field="nom" data-type="varchar"><?php echo htmlspecialchars($product['nom']); ?></td>
+                <td class="editable" data-field="description" data-type="text"><?php echo htmlspecialchars($product['description']); ?></td>
                 <td><img src="../../assets/images/<?php echo htmlspecialchars($product['image']); ?>" alt="<?php echo htmlspecialchars($product['nom']); ?>" width="50"></td>
-                <td class="editable" data-field="prix"><?php echo htmlspecialchars($product['prix']); ?> €</td>
-                <td class="editable" data-field="quantite"><?php echo htmlspecialchars($product['quantite']); ?></td>
-                <td class="editable" data-field="nom_sc"><?php echo htmlspecialchars($product['nom_sc']); ?></td>
-                <td class="editable" data-field="nom_p"><?php echo htmlspecialchars($product['nom_p']); ?></td>
+                <td class="editable" data-field="prix" data-type="decimal"><?php echo htmlspecialchars($product['prix']); ?> €</td>
+                <td class="editable" data-field="quantite" data-type="integer"><?php echo htmlspecialchars($product['quantite']); ?></td>
+                <td><?php echo htmlspecialchars($product['nom_sc']); ?></td>
+                <td><?php echo htmlspecialchars($product['nom_p']); ?></td>
                 <td>
                     <button class="btn btn-edit">Modifier</button>
-                    <button class="btn btn-save" style="display: none;">Enregistrer</button>
+                    <button class="btn btn-save" style="display: none;">Valider</button>
                     <button class="btn btn-cancel" style="display: none;">Annuler</button>
                     <a href="delete-produit.php?id=<?php echo $product['id']; ?>" class="btn btn-delete" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?');">Supprimer</a>
                 </td>
@@ -57,6 +57,10 @@ include $includePath . '_header.php';
         <?php endif; ?>
     </section>
 </main>
+<script>
+var categories = <?php echo json_encode($categories); ?>;
+var sousCategories = <?php echo json_encode($sousCategories); ?>;
+</script>
 <script src="../../assets/js/admin-produits.js"></script>
 <?php
 

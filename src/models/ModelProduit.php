@@ -33,4 +33,28 @@ class ModelProduit
         $requete->execute([$nom, $description, $prix, $quantite, $image, $date_ajout, $categorie, $sous_categorie]);
     }
 
+    public function updateProduct($id, $data)
+    {
+        $allowedFields = ['nom', 'description', 'prix', 'quantite'];
+        $updates = [];
+        $params = [];
+
+        foreach ($allowedFields as $field) {
+            if (isset($data[$field])) {
+                $updates[] = "$field = :$field";
+                $params[$field] = $data[$field];
+            }
+        }
+
+        if (empty($updates)) {
+            return false;
+        }
+
+        $query = "UPDATE Produit SET " . implode(', ', $updates) . " WHERE id = :id";
+        $params['id'] = $id;
+
+        $stmt = $this->connexion->prepare($query);
+        return $stmt->execute($params);
+    }
+
 }
