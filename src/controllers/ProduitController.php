@@ -1,7 +1,7 @@
 <?php
 
-require_once '../models/ModelProduit.php';
-require_once '../models/connexion.php';
+require_once 'src/models/ModelProduit.php';
+require_once 'src/models/connexion.php';
 
 class ProduitController
 {
