@@ -20,6 +20,7 @@ class HomeController
         $myView->render();
     }
 
+    // Pour afficher la page404
     public function show404()
     {
         $title = 'Erreur 404';
@@ -28,6 +29,7 @@ class HomeController
         $myView->render();
     }
 
+    // Pour afficher la page categories
     public function showCategories()
     {
         $title = 'Pixel Plush - Categories';
@@ -36,6 +38,7 @@ class HomeController
         $myView->render();
     }
 
+    // Pour afficher la page profil
     public function showProfil()
     {
         $title = 'Pixel Plush - Mon Profil';
@@ -44,6 +47,7 @@ class HomeController
         $myView->render();
     }
 
+    // Pour afficher la page connexion
     public function showConnexion()
     {
         $title = 'Pixel Plush - Connexion';
@@ -52,6 +56,7 @@ class HomeController
         $myView->render();
     }
 
+    // Pour afficher la page detail
     public function showDetail()
     {
         $title = 'Pixel Plush - Détails';
