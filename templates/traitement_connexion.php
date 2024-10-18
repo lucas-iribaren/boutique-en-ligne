@@ -18,7 +18,6 @@ if (!empty($_POST)) {
     $user = $utilisateur->login($email, $mot_de_passe);
 
     if ($user) {
-        // Convertir l'objet stdClass en tableau associatif
         $user = (array) $user;
 
         $_SESSION['user'] = [
@@ -27,7 +26,14 @@ if (!empty($_POST)) {
             'prenom' => $user['prenom'],
             'email' => $user['email']
         ];
-        header('Location: profil');
+
+        if ($user["role_id"] == 2) {
+            header('Location: profil');
+        } elseif ($user["role_id"] == 1) {
+            header('Location: profilAdmin');
+        } else {
+            $message = 'Identifiants incorrects';
+        }
     } else {
         $message = 'Identifiants incorrects';
     }
