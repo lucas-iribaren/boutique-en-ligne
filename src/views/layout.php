@@ -16,7 +16,7 @@
         <ul>
             <li>
                 <a class="#" href="panier">Panier
-                    <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
+                    <img class="hw-50px" src="<?php echo ASSETS;?>/images/panier.png"alt="panier logo">
                 </a>
             </li>
             <li>
