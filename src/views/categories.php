@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category</title>
-    <link rel="stylesheet" href="../../assets/css/styles.css">
-</head>
-<body>
     <section class="dropdown">
         <span>🔎</span>
         <section class="dropdown-content">
@@ -17,7 +8,7 @@
 
     <section class="container">
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -26,7 +17,7 @@
         </section>
 
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -35,7 +26,7 @@
         </section>
 
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -44,7 +35,7 @@
         </section>
 
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -53,7 +44,7 @@
         </section>
 
         <section class="articles">
-            <img src="../../assets/images/placeholder.png" alt="Article Image">
+            <img src="<?php echo ASSETS;?>/images/placeholder.png" alt="Article Image">
             <ul>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
                 <li><a href="http://" target="_blank" rel="noopener noreferrer">🔲</a></li>
@@ -68,5 +59,4 @@
         <a href="http://">3</a>
         <a href="#">...</a>
     </section>
-</body>
-</html>
+
