@@ -63,9 +63,10 @@
 </section>
 
 
-
-<!-- CONTENU DES PAGES -->
-<?php echo $contentPage; ?>
+<main>
+    <!-- CONTENU DES PAGES -->
+    <?php echo $contentPage; ?>
+</main>
 
 
 <footer>
