@@ -45,15 +45,19 @@
                 <a href="#carouselPhareDetail" class="carousel-control-product"></a>
     </article>
 </section>
-<section class="section_categorie">
-    <article class="article_categorie flex space-around flex-wrap ">
-        <a href="#" class="card_categorie flex-column">
-            <h3>Catégorie</h3>
-            <img src="assets/images/jeux_videos.png" class="" alt="Catégorie jeux video">
-        </a>
-        <a href="#" class="card_categorie flex-column">
-            <h3>Catégorie</h3>
-            <img src="assets/images/films_&_series.png" class="" alt="Catégorie Films et Séries">
-        </a>
+<section class="section_categorie article_categorie flex space-around flex-wrap">
+    <a href="#" class="card_categorie flex-column">
+        <h3>Catégorie</h3>
+        <img src="assets/images/jeux_videos.png" class="" alt="Catégorie jeux video">
+    </a>
+    <a href="#" class="card_categorie flex-column">
+        <h3>Catégorie</h3>
+        <img src="assets/images/films_&_series.png" class="" alt="Catégorie Films et Séries">
+    </a>
+</section>
+<section class="section">
+    <h3>Produits</h3>
+    <article class="article_produit flex space-around flex-wrap">
+        <!-- produits -->
     </article>
 </section>
