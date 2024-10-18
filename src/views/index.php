@@ -1,3 +1,11 @@
+<?php
+include 'src/controllers/ProduitController.php';
+
+$produitController = new ProduitController();
+$products = $produitController->getAllProducts();
+
+?>
+
 <section class="section_phare">
     <h3>Produits phares</h3>
     <article class="article_phare flex space-around carousel slide" data-ride="carousel">
@@ -10,7 +18,7 @@
                             Produit 1
                         </h5>
                         <p>
-                            Description du produit 1
+                            Peluche représentant Izuku Midoriya (Deku), l'apprenti héros de My Hero Academia, dans son costume vert.
                         </p>
                     </div>
                 </div>
@@ -55,9 +63,21 @@
         <img src="assets/images/films_&_series.png" class="" alt="Catégorie Films et Séries">
     </a>
 </section>
-<section class="section">
+<section class="section_products">
     <h3>Produits</h3>
     <article class="article_produit flex space-around flex-wrap">
-        <!-- produits -->
+        <?php
+        foreach ($products as $produit) {
+        ?>
+            <div class="card_produit">
+                <img class="card_produit_img" src="assets/images/<?php echo $produit['image']; ?>" alt="Produit">
+                <h4><?php echo $produit['nom']; ?></h4>
+                <p><?php echo $produit['description']; ?></p>
+                <p><?php echo $produit['prix']; ?> €</p>
+                <a href="#" class="btn btn-ajouter">Ajouter au panier</a>
+            </div>
+        <?php
+        }
+        ?>
     </article>
 </section>
