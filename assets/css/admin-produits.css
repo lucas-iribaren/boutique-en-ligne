@@ -1,0 +1,98 @@
+/* Style de base du tableau */
+.product-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+/* Style des cellules */
+.product-table th,
+.product-table td {
+    border: 1px solid black;
+    padding: 10px;
+    font-family: 'Afaacad', sans-serif;
+}
+
+/* Ligne 1 */
+.line-1 {
+    background-color: var(--grey);
+    color: var(--background);
+}
+
+/* Autres lignes */
+.other-lines {
+    background-color: var(--background);
+}
+
+/* Version Mobile - 3 colonnes */
+@media (max-width: 768px) {
+    /* Cache toutes les colonnes sauf ID, Nom produit et Détail */
+    .product-table tr th:nth-child(4),
+    .product-table tr td:nth-child(4),
+    .product-table tr th:nth-child(5),
+    .product-table tr td:nth-child(5),
+    .product-table tr th:nth-child(6),
+    .product-table tr td:nth-child(6),
+    .product-table tr th:nth-child(7),
+    .product-table tr td:nth-child(7) {
+        display: none;
+    }
+
+    /* Ajuster le style pour la case 'détail' */
+    .product-table .description-header::before {
+        content: "Détail";
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: inherit;
+    }
+
+    .product-table .description-header {
+        visibility: hidden;
+        position: relative;
+        background-color: var(--grey);
+    }
+
+    /* Style pour le bouton '+' */
+    .product-table .description-cell {
+        position: relative;
+    }
+
+    .product-table .description-cell::after {
+        content: "+";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: var(--background);
+        background-color: var(--blue);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+/* Style pour le bouton d'ajout d'image */
+.product-table button {
+    background-color: var(--blue);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-table button:hover {
+    background-color: var(--yellow);
+}
