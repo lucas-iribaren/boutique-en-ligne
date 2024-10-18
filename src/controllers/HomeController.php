@@ -28,10 +28,10 @@ class HomeController
         $myView->render();
     }
 
-    public function showCategory()
+    public function showCategories()
     {
-        $title = 'Category';
-        $myView = new View('Category');
+        $title = 'categories';
+        $myView = new View('categories');
         $myView->setVars(['title' => $title]);
         $myView->render();
     }
@@ -40,6 +40,22 @@ class HomeController
     {
         $title = 'Mon Profil';
         $myView = new View('profil');
+        $myView->setVars(['title' => $title]);
+        $myView->render();
+    }
+
+    public function showConnexion()
+    {
+        $title = 'Connexion';
+        $myView = new View('connexion');
+        $myView->setVars(['title' => $title]);
+        $myView->render();
+    }
+
+    public function showDetail()
+    {
+        $title = 'Détails';
+        $myView = new View('detail');
         $myView->setVars(['title' => $title]);
         $myView->render();
     }

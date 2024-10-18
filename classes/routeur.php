@@ -6,11 +6,13 @@ class Routeur
     
     // Tableau de correspondance entre les routes et les controllers
     private $routes = [ 
-        "index"  => ["controller" => 'HomeController', "method" => 'showHome'], 
-        "panier" => ["controller" => 'HomeController', "method" => 'showPanier'],
-        "page404" => ["controller" => 'HomeController', "method" => 'show404'],
-        "Category" => ["controller" => 'HomeController', "method" => 'showCategory'],
-        "profil" => ["controller" => 'HomeController', "method" => 'showProfil']
+        "index"      => ["controller" => 'HomeController', "method" => 'showHome'], 
+        "panier"     => ["controller" => 'HomeController', "method" => 'showPanier'],
+        "page404"    => ["controller" => 'HomeController', "method" => 'show404'],
+        "categories" => ["controller" => 'HomeController', "method" => 'showCategories'],
+        "profil"     => ["controller" => 'HomeController', "method" => 'showProfil'],
+        "connexion"  => ["controller" => 'HomeController', "method" => 'showConnexion'],
+        "detail"     => ["controller" => 'HomeController', "method" => 'showDetail']
     ];
 
     public function __construct($request)
