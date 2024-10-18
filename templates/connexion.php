@@ -1,5 +1,5 @@
 <main>
-    <form action="" method="post">
+    <form action="traitement_connexion" method="post">
         <h1>Connexion</h1>
         <p>Connectez-vous pour accéder à votre compte.</p>
         <div>
@@ -10,6 +10,8 @@
             <label for="mot_de_passe">mot de passe</label>
             <input type="password" id="mot_de_passe" name="mot_de_passe" required>
         </div>
+        <div>
+            <input type="submit" value="valider">
     </form>
 </main>
 
