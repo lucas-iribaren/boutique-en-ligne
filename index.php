@@ -1,16 +1,23 @@
 <?php
-include_once 'config/config.php';
-
-// Autoloader pour charger les classes
-myAutoload::start();
-
-// Récupération de la route (paramètre 'r' dans l'URL)
-$request = $_GET['r'] ?? 'index';  // index.php?r...
-
+session_start();
+require_once "includes/_head.php";
+require_once "includes/_header.php";
 ?>
-<main>
-    <?php
-    $routeur = new Routeur($request);
-    $routeur->renderController();
-    ?>
-</main>
+
+<?php
+
+
+   $page = isset($_GET['page']) ? $_GET['page'] : 'home';
+
+   $file = __DIR__ . "/templates/" . $page . ".php";
+
+   
+   if (file_exists($file)) {
+       require_once($file);
+   } else {
+       require_once (__DIR__. "/templates/error404.php");
+   }
+   ?>
+
+require_once "includes/_footer.php";
+?>
