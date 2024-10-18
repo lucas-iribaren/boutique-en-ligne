@@ -9,71 +9,78 @@
     <link rel="icon" type="favicon" href="<?php echo ASSETS;?>/images/favicon.ico">
     <link rel="stylesheet" href="<?php echo ASSETS;?>/css/styles.css">
     <link rel="stylesheet" href="<?php echo ASSETS;?>/css/admin-produits.css">
-    <title><?php echo $title ?? 'Pixel Plush'; ?></title></head>
+    <title><?php echo $title ?? 'Pixel Plush'; ?></title>
+</head>
 <body>
-<header class="flex space-between center vertical-center">
-    <div class="off-screen-menu hide_desktop">
-        <ul>
-            <li>
-                <a class="#" href="panier">Panier
-                    <img class="hw-50px" src="<?php echo ASSETS;?>/images/panier.png"alt="panier logo">
-                </a>
-            </li>
-            <li>
-                <a href="#">Rechercher
-                    <img class="hw-50px" src="assets/images/loupe.png" alt="loupe logo">
-                </a>
-            </li>
-        </ul>
-    </div>
 
-    <nav>
-        <div class="ham-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+    <!-- Lien de l'ancre en haut de la page -->
+    <a id="top"></a> 
+
+    <header class="flex space-between center vertical-center">
+        <div class="off-screen-menu hide_desktop">
+            <ul>
+                <li>
+                    <a class="#" href="panier">Panier
+                        <img class="hw-50px" src="<?php echo ASSETS;?>/images/panier.png" alt="panier logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Rechercher
+                        <img class="hw-50px" src="assets/images/loupe.png" alt="loupe logo">
+                    </a>
+                </li>
+            </ul>
         </div>
-    </nav>
-    <a href="index">
-        <img src="assets/images/logo.png" class="logo" alt="logo">
-    </a>
-    <h1 class="hide_mobile">Pixel Plush</h1>
-    <nav class="flex space-center vertical-center gap">
-        <input class="hide_mobile" type="text" placeholder="Rechercher">
-        <a class="hide_mobile" href="panier">
-            <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
-            Panier
+
+        <nav>
+            <div class="ham-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <a href="index">
+            <img src="assets/images/logo.png" class="logo" alt="logo">
         </a>
-        <a class="flex column vertical-center" href="connexion">
-            <img class="hw-50px" src="assets/images/utilisateur.png" alt="utilisateur logo">
-            <?php
-            if (isset($_SESSION['user'])) {
-                echo "Bonjour" . $_SESSION['user']['prenom'];
-            } else {
-                echo 'Connexion';
-            }
-            ?>
-        </a>
-    </nav>
-</header>
+        <h1 class="hide_mobile">Pixel Plush</h1>
+        <nav class="flex space-center vertical-center gap">
+            <input class="hide_mobile" type="text" placeholder="Rechercher">
+            <a class="hide_mobile" href="panier">
+                <img class="hw-50px" src="assets/images/panier.png" alt="panier logo">
+                Panier
+            </a>
+            <a class="flex column vertical-center" href="connexion">
+                <img class="hw-50px" src="assets/images/utilisateur.png" alt="utilisateur logo">
+                <?php
+                if (isset($_SESSION['user'])) {
+                    echo "Bonjour" . $_SESSION['user']['prenom'];
+                } else {
+                    echo 'Connexion';
+                }
+                ?>
+            </a>
+        </nav>
+    </header>
 
-<!-- BANDEAU -->
-<section class="section">
-    <h2>Retrouve tes personnages préférés à câliner</h2>
-</section>
+    <!-- BANDEAU -->
+    <section class="section">
+        <h2>Retrouve tes personnages préférés à câliner</h2>
+    </section>
 
+    <main>
+        <!-- CONTENU DES PAGES -->
+        <?php echo $contentPage; ?>
+    </main>
 
-<main>
-    <!-- CONTENU DES PAGES -->
-    <?php echo $contentPage; ?>
-</main>
+    <!-- Ancre -->
+    <a href="#top" class="ancre" id="scrollToTop">↑</a>
 
+    <footer>
+        <p>&copy; Pixel Plush 2024</p>
+    </footer>
 
-<footer>
-    <p>&copy; Pixel Plush 2024</p>
-</footer>
+    <script src="<?php echo ASSETS;?>/js/burger.js"></script>
+    <script src="<?php echo ASSETS;?>/js/ancre.js"></script>
 
-<script src="assets/js/burger.js"></script>
 </body>
 </html>
-

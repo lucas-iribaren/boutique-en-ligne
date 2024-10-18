@@ -142,6 +142,32 @@ footer {
     width: 100%; /* Assure que le footer prend toute la largeur */
 }
 
+/* Ancre */
+.ancre {
+    position: fixed; /* Fixe la position de l'icône */
+    bottom: 20px; /* Espace depuis le bas */
+    right: 20px; /* Espace depuis la droite */
+    background-color: var(--blue); /* Couleur de fond (modifiable) */
+    color: var(--background); /* Couleur de texte */
+    border-radius: 50%; /* Arrondir les coins */
+    width: 50px; /* Largeur de l'icône */
+    height: 50px; /* Hauteur de l'icône */
+    display: flex; /* Utilisation de flexbox pour centrer le contenu */
+    align-items: center; /* Centrer verticalement */
+    justify-content: center; /* Centrer horizontalement */
+    text-align: center; /* Centrer le texte */
+    text-decoration: none; /* Supprime le soulignement */
+    font-size: 1.5rem; /* Taille de la police */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre pour un effet d'élévation */
+    transition: background-color 0.3s; /* Transition de couleur */
+    border-color: white;
+    border-style: solid;
+}
+
+.ancre:hover {
+    background-color: var(--yellow); /* Changement de couleur au survol */
+}
+
 /* sections */
 .section_phare,
 .section {
