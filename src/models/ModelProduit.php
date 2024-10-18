@@ -47,14 +47,24 @@ class ModelProduit
         }
 
         if (empty($updates)) {
+            error_log("No updates to perform");
             return false;
         }
 
         $query = "UPDATE Produit SET " . implode(', ', $updates) . " WHERE id = :id";
         $params['id'] = $id;
 
+        error_log("Query: " . $query);
+        error_log("Params: " . print_r($params, true));
+
         $stmt = $this->connexion->prepare($query);
-        return $stmt->execute($params);
+        $result = $stmt->execute($params);
+
+        if (!$result) {
+            error_log("Error executing query: " . print_r($stmt->errorInfo(), true));
+        }
+
+        return $result;
     }
 
 }

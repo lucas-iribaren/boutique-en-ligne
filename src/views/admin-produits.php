@@ -67,3 +67,19 @@ var sousCategories = <?php echo json_encode($sousCategories); ?>;
 // Inclusion du footer
 include $includePath . '_footer.php';
 ?>
+
+<style>
+.product-table .editable input,
+.product-table .editable textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.product-table .editable textarea {
+    resize: vertical;
+}
+</style>
+

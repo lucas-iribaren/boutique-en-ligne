@@ -28,10 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     cell.innerHTML = `<textarea>${value}</textarea>`;
                     break;
                 case 'decimal':
-                    cell.innerHTML = `<input type="number" value="${value}" step="0.01">`;
+                    cell.innerHTML = `<input type="number" value="${value}" step="0.01" min="0">`;
                     break;
                 case 'integer':
-                    cell.innerHTML = `<input type="number" value="${value}" step="1">`;
+                    cell.innerHTML = `<input type="number" value="${value}" step="1" min="0">`;
                     break;
             }
         });
