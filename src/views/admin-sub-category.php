@@ -2,7 +2,7 @@
 include_once(__DIR__ . "/../../include/_head.php");
 include_once(__DIR__ . "/../../include/_header.php");
 
-include('./../models/db.php')
+include('./../models/db.php');
 ?>
 
 <!DOCTYPE html>
@@ -38,10 +38,10 @@ include('./../models/db.php')
             <input type="text" id="tendances" placeholder="Search">
         </section>
         
-        <section class="section">
+        <!-- <section class="section">
             <label for="tags">Tags</label>
             <input type="text" id="tags" placeholder="Name">
-        </section>
+        </section> -->
         
         <button class="btn-ajouter" type="submit">Valider</button>
     </section>
